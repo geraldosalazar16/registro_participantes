@@ -46,35 +46,35 @@ try{
     if($decoded->iss == $global_apiserver) {
 
         $respuesta["validez"] = 'valido';
-        $cliente = $database->get("CLIENTES", ["ID", "NOMBRE", "RFC","RFC_FACTURARIO","ES_FACTURARIO"], ["ID" => $decoded->data->id_cliente]);
+        $cliente = $database->get("CLIENTES", ["ID", "NOMBRE", "RFC","RFC_FACTURARIO","ES_FACTURARIO"], ["ID" => $decoded->data->ID_CLIENTE]);
         valida_error_medoo_and_die();
         $respuesta["CLIENTE"] = $cliente;
-        $respuesta["MODALIDAD"] = $decoded->data->tipo_curso;
+        $respuesta["MODALIDAD"] = $decoded->data->MODALIDAD;
 
-        if ($decoded->data->tipo_curso == "programado") {
-            $curso_programado = $database->get("CURSOS_PROGRAMADOS", "*", ["ID" => $decoded->data->id_curso]);
+        if ($decoded->data->MODALIDAD == "programado") {
+            $curso_programado = $database->get("CURSOS_PROGRAMADOS",["[><]CURSOS"=>["ID_CURSO"=>"ID_CURSO"]], ["CURSOS_PROGRAMADOS.ID","CURSOS_PROGRAMADOS.PERSONAS_MINIMO","CURSOS.NOMBRE"], ["ID" => $decoded->data->ID_CURSO]);
             valida_error_medoo_and_die();
-            $curso = $database->get("CURSOS",["NOMBRE"],["ID_CURSO"=>$curso_programado["ID_CURSO"]]);
-            valida_error_medoo_and_die();
-            $curso_programado["SEDE"] = "EN el IMNC";
-            $curso_programado["NOMBRE"] = $curso["NOMBRE"];
+            $etapa = $database->get("ETAPAS_PROCESO",["ETAPA"],["ID_ETAPA"=>$curso_programado["ETAPA"]]);
+            $curso_programado["NOMBRE_ETAPA"] = $etapa["ETAPA"];
             $respuesta["CURSO"] = $curso_programado;
-            $respuesta["ID"] = $decoded->data->id_curso;
-
+            $respuesta["ID"] = $decoded->data->ID_CURSO;
 
         }
-        if ($decoded->data->tipo_curso == "insitu") {
-            $curso = $database->get("CURSOS", "*", ["ID_CURSO" => $decoded->data->id_curso]);
+        if ($decoded->data->MODALIDAD == "insitu") {
+            $curso = $database->get("CURSOS", "*", ["ID_CURSO" => $decoded->data->ID_CURSO]);
             valida_error_medoo_and_die();
-
-            $sede = $database->get("SCE_CURSOS" ,["[><]CLIENTES_DOMICILIOS"=>["ID_SITIO"=>"ID"]],["NOMBRE_DOMICILIO","CALLE","NUMERO_EXTERIOR","NUMERO_INTERIOR","COLONIA_BARRIO","DELEGACION_MUNICIPIO"],["AND"=>["ID_SCE"=>$decoded->data->id_programacion,"ID_CURSO"=>$decoded->data->id_curso]]);
+            $sede = $database->get("SCE_CURSOS" ,["[><]CLIENTES_DOMICILIOS"=>["ID_SITIO"=>"ID"]],["NOMBRE_DOMICILIO","CALLE","NUMERO_EXTERIOR","NUMERO_INTERIOR","COLONIA_BARRIO","DELEGACION_MUNICIPIO"],["AND"=>["ID_SCE"=>$decoded->data->ID_PROGRAMACION,"ID_CURSO"=>$decoded->data->ID_CURSO]]);
             valida_error_medoo_and_die();
             $curso["SEDE"] =$sede["NOMBRE_DOMICILIO"].($sede["CALLE"]?", Calle: ".$sede["CALLE"]:"").($sede["NUMERO_EXTERIOR"]?", # Ext.: ".$sede["NUMERO_EXTERIOR"]:"").($sede["NUMERO_INTERIOR"]?", # Int.: ".$sede["NUMERO_INTERIOR"]:"").($sede["COLONIA_BARRIO"]?", Barrio: ".$sede["COLONIA_BARRIO"]:"").($sede["DELEGACION_MUNICIPIO"]?", Municipio: ".$sede["DELEGACION_MUNICIPIO"]:"");
+            $sce = $database->get("SERVICIO_CLIENTE_ETAPA",["[><]ETAPAS_PROCESO"=>["ID_ETAPA_PROCESO"=>"ID_ETAPA"]],["ETAPA"],["SERVICIO_CLIENTE_ETAPA.ID"=>$decoded->data->ID_PROGRAMACION]);
+            valida_error_medoo_and_die();
+            $curso["NOMBRE_ETAPA"] = $sce["ETAPA"];
             $respuesta["CURSO"] = $curso;
-            $respuesta["ID"] = $decoded->data->id_programacion;
+            $respuesta["ID"] = $decoded->data->ID_PROGRAMACION;
         }
 
-        $domicilios = $database->select("CLIENTES_DOMICILIOS","*",["AND"=>["ID_CLIENTE"=>$decoded->data->id_cliente,"ES_FISCAL"=>"si"]]);
+
+        $domicilios = $database->select("CLIENTES_DOMICILIOS","*",["AND"=>["ID_CLIENTE"=>$decoded->data->ID_CLIENTE,"ES_FISCAL"=>"si"]]);
         valida_error_medoo_and_die();
         $domicilios_aux = [];
         for($i = 0; $i < count($domicilios); $i++)
