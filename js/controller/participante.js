@@ -16,6 +16,7 @@ angular.module('myApp', []).controller('participanteController', function($scope
   $scope.datosDomicilios = {};
   $scope.datosContactos = {};
   $scope.participantes = {};
+  $scope.detalles = {};
   $scope.ID = "";
   $scope.formData.facturacion = "NO";
   $scope.formData.select_medidas_proteccion = "NO";
@@ -26,6 +27,7 @@ angular.module('myApp', []).controller('participanteController', function($scope
   $scope.total = 5; //cantidad total de participantes que tiene registrado ese curso
   $scope.show_p = false;
   $scope.formData.medio = "";
+  $scope.isdisabled = false;
 
 
   $scope.token = getQueryVariable("token");
@@ -51,9 +53,13 @@ $scope.verificaToken = function () {
             $scope.datosDomicilios = respuesta.DOMICILIOS;
             $scope.datosContactos = respuesta.DOMICILIOS[0].CONTACTOS;
             $scope.ID = respuesta.ID;
+            $scope.detalles = respuesta.DETALLES;
             $scope.cantidad_domicilios = respuesta.CD;
             $scope.cantidad_contacto = respuesta.DOMICILIOS[0].CC;
+            $scope.isdisabled = respuesta.DISABLED;
+            $scope.cargarDetalles();
             $scope.cargaParticipantes();
+            $scope.$apply();
 
         }
         else
@@ -78,6 +84,60 @@ $scope.verificaToken = function () {
                 $scope.$apply();
 
             });
+    }
+// ===================================================================
+// ***** 	  FUNCION PARA CARGAR DETALLES GUARDADOS		 *****
+// ===================================================================
+    $scope.cargarDetalles = function(){
+         $scope.formData.necesidades = $scope.detalles.NECESIDADES;
+
+         if($scope.detalles.ISFACTURACION)
+         {
+             $scope.formData.facturacion = $scope.detalles.ISFACTURACION;
+             $scope.edit = true;
+         }
+
+         if($scope.formData.facturacion=="SI")
+         {
+                 $scope.editf = true;
+
+                 $scope.formData.otro_domicilio = $scope.detalles.DOMICILIO;
+
+                 $scope.formData.rfc_facturario = $scope.detalles.RFC_FACTURARIO;
+
+                 var contacto = $scope.detalles.CONTACTO.split(",");
+                 $scope.formData.otro_contacto_nombre = contacto[0];
+                 $scope.formData.otro_contacto_telefono = contacto[1];
+                 $scope.formData.otro_contacto_email = contacto[2];
+
+         }
+         else
+         {
+             $scope.editf = false;
+         }
+
+        $scope.formData.medio = $scope.detalles.MEDIO;
+        $scope.formData.sede_curso = $scope.detalles.SEDE;
+        $scope.formData.hora_inicio = $scope.detalles.HORA_INICIO;
+        $scope.formData.hora_fin = $scope.detalles.HORA_FIN;
+        $scope.formData.recomendacion_hospedaje = $scope.detalles.HOSPEDAJE;
+        $scope.formData.recomendacion_transporte = $scope.detalles.TRASPORTE;
+        if($scope.detalles.TRASLADO)
+        $scope.formData.disponibilidad_traslado = $scope.detalles.TRASLADO;
+        if($scope.detalles.ISMEDIDAS)
+        $scope.formData.select_medidas_proteccion = $scope.detalles.ISMEDIDAS;
+        var fecha = $scope.detalles.FECHA_CURSO;
+
+        $scope.formData.fecha_curso = (fecha?fecha.substring(6,8)+"/"+fecha.substring(4,6)+"/"+fecha.substring(0,4):'');
+
+        if($scope.formData.select_medidas_proteccion=="SI")
+        {
+            $scope.formData.medidas_proteccion = $scope.detalles.MEDIDAS;
+        }
+
+        $scope.formData.estado_visita = $scope.detalles.ESTADO;
+
+
     }
 // ================================================================================
 // *****      Accion select si facturacion                              *****
@@ -107,8 +167,14 @@ $scope.verificaToken = function () {
       $scope.od=flag;
       $scope.formData.otro_domicilio = "";
       if(!flag){
-          $scope.formData.otro_domicilio =  $scope.formData.domicilio_fiscal.NOMBRE;
-          $scope.error_otro_domicilio = "";
+          if($scope.edit == true)
+          {
+              $scope.formData.otro_domicilio = $scope.detalles.DOMICILIO;
+          }else{
+              $scope.formData.otro_domicilio =  $scope.formData.domicilio_fiscal.NOMBRE;
+              $scope.error_otro_domicilio = "";
+          }
+
       }
 
     }
@@ -120,6 +186,20 @@ $scope.verificaToken = function () {
         $scope.formData.otro_contacto_nombre = "";
         $scope.formData.otro_contacto_telefono = "";
         $scope.formData.otro_contacto_email= "";
+        if(!flag)
+        {
+            if($scope.edit == true)
+            {
+                var contacto = $scope.detalles.CONTACTO.split(",");
+                $scope.formData.otro_contacto_nombre = contacto[0];
+                $scope.formData.otro_contacto_telefono = contacto[1];
+                $scope.formData.otro_contacto_email = contacto[2];
+            }else {
+                $scope.formData.otro_contacto_nombre = $scope.formData.domicilio_contacto.NOMBRE_CONTACTO;
+                $scope.formData.otro_contacto_telefono = ($scope.formData.domicilio_contacto.TELEFONO_FIJO ? $scope.formData.domicilio_contacto.TELEFONO_FIJO : $scope.formData.domicilio_contacto.TELEFONO_MOVIL);
+                $scope.formData.otro_contacto_email = $scope.formData.domicilio_contacto.EMAIL;
+            }
+        }
     }
 // ================================================================================
 // *****      Accion rfc entrada libre                                  *****
@@ -184,7 +264,16 @@ $scope.verificaToken = function () {
                     $scope.error_fecha_curso = "Complete este campo";
                     setfocus = "fecha_curso";
                 } else {
-                    $scope.error_fecha_curso = "";
+                    if($scope.validar_fecha($scope.formData.fecha_curso))
+                    {
+                        $scope.error_fecha_curso = "";
+                    }
+                    else
+                    {
+                        $scope.respuesta = 0;
+                        $scope.error_fecha_curso = "Fecha inválida";
+                        setfocus = "fecha_curso";
+                    }
                 }
             } else {
                 $scope.respuesta = 0;
@@ -253,7 +342,7 @@ $scope.verificaToken = function () {
         if($scope.formData.facturacion == "SI")
         {
 
-            if($scope.oc == true)
+            if($scope.oc == true || $scope.edit==true)
             {
 
               if(typeof $scope.formData.otro_contacto_email !== "undefined") {
@@ -395,7 +484,7 @@ $scope.verificaToken = function () {
         {
             $('#'+setfocus).focus();
         }
-        $scope.validar_fecha($scope.formData.fecha_curso);
+
     }
 // =======================================================================================
 // *****               Función para observar el campo del formulario         		 *****
@@ -412,9 +501,6 @@ $scope.verificaToken = function () {
         validar_formulario();
         if($scope.respuesta == 1){
             $scope.insertar();
-
-
-
         }
 
     }
@@ -422,7 +508,7 @@ $scope.verificaToken = function () {
 // *****   Funcion guardar los datos del formulario general 			 *****
 // =======================================================================================================
    $scope.insertar = function () {
-
+       $scope.enviar = true;
        var fecha = $scope.formData.fecha_curso;
        fecha = fecha.substring(6,10)+fecha.substring(3,5)+fecha.substring(0,2);
         var datos = {
@@ -431,7 +517,8 @@ $scope.verificaToken = function () {
            ISFACTURACION:$scope.formData.facturacion,
            DOMICILIO:($scope.formData.facturacion=="SI"?$scope.formData.otro_domicilio:""),
            RFC_FACTURARIO:($scope.formData.facturacion=="SI"?$scope.formData.rfc_facturario:""),
-           CONTACTO:($scope.formData.facturacion=="SI"?($scope.oc == true? ($scope.formData.otro_contacto_nombre+','+$scope.formData.otro_contacto_telefono+','+$scope.formData.otro_contacto_email):($scope.formData.domicilio_contacto.NOMBRE_CONTACTO+','+($scope.formData.domicilio_contacto.TELEFONO_FIJO?$scope.formData.domicilio_contacto.TELEFONO_FIJO:$scope.formData.domicilio_contacto.TELEFONO_MOVIL),$scope.formData.domicilio_contacto.EMAIL)):''),
+           //CONTACTO:($scope.formData.facturacion=="SI"?($scope.oc == true? ($scope.formData.otro_contacto_nombre+','+$scope.formData.otro_contacto_telefono+','+$scope.formData.otro_contacto_email):($scope.formData.domicilio_contacto.NOMBRE_CONTACTO+','+($scope.formData.domicilio_contacto.TELEFONO_FIJO?$scope.formData.domicilio_contacto.TELEFONO_FIJO:$scope.formData.domicilio_contacto.TELEFONO_MOVIL),$scope.formData.domicilio_contacto.EMAIL)):''),
+           CONTACTO:($scope.formData.facturacion=="SI"?($scope.formData.otro_contacto_nombre+','+$scope.formData.otro_contacto_telefono+','+$scope.formData.otro_contacto_email):''),
            MEDIO:$scope.formData.medio,
            MODALIDAD:$scope.modalidad,
            SEDE:($scope.modalidad=='insitu'?$scope.formData.sede_curso:""),
@@ -451,6 +538,8 @@ $scope.verificaToken = function () {
        $.post(global_apiserver + "/insert/", JSON.stringify(datos), function (respuesta) {
            respuesta = JSON.parse(respuesta);
            if (respuesta.resultado == "ok") {
+                 $scope.mensaje_success = "Los datos del formulario fueron enviados con exito";
+                 $("#mensaje_success_id").focus();
            }
            else
            {
@@ -466,7 +555,8 @@ $scope.verificaToken = function () {
                }
 
            }
-
+           $scope.enviar = false;
+           $scope.$apply();
        });
 
 
@@ -581,12 +671,17 @@ $scope.validar_rfc = function(input)
      $scope.validar_fecha = function(fecha) {
     if (typeof fecha !== "undefined") {
         if (validar_formato_fecha(fecha)) {
-            if (existe_fecha(fecha)) {
-                return true;
+            if(esDespuesHoy(fecha))
+            {
+                if (existe_fecha(fecha)) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
             }
-            else {
-                return false;
-            }
+            else
+            {return false;}
         } else {
 
             return false;;
@@ -658,7 +753,8 @@ $scope.validar_rfc = function(input)
             CURP: $scope.formDataParticipante.curp_participante,
             PERFIL: $scope.formDataParticipante.perfil_participante,
             MODALIDAD: $scope.modalidad,
-            ID: $scope.ID
+            ID: $scope.ID,
+            ESTADO:($scope.modalidad=='programado'?$scope.formData.estado_visita:"")
         }
         if (!$scope.existeParticipante(add)) {
             $.post(global_apiserver + "/insertParticipante/", JSON.stringify(add), function (respuesta) {
@@ -962,6 +1058,7 @@ $scope.mostrarMensaje  = function (title,mensaje) {
   $(document).ready(function () {
       $scope.verificaToken();
       $scope.cargarEstados();
+
 
       $(function () {
           var fecha =  $('#fecha_curso').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY', minDate : new Date() });

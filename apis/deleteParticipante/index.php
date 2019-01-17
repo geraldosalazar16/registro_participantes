@@ -41,6 +41,11 @@ valida_parametro_and_die($ID, "Es necesario el ID_PROGRAMACION",null);
 
 $id = $database->delete("PARTICIPANTES", ["ID"=>$ID]);
 valida_error_medoo_and_die();
+if($id != 0)
+{
+    $idcp = $database->delete("CURSOS_PROGRAMADOS_PARTICIPANTES", ["ID_PARTICIPANTE"=>$ID]);
+    $idsce = $database->delete("SCE_PARTICIPANTES", ["ID_PARTICIPANTE"=>$ID]);
+}
 
 $respuesta["resultado"]="ok";
 

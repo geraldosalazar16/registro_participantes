@@ -37,9 +37,9 @@ $respuesta = array();
 //payload
 $data = [
     'ID_CLIENTE' => 140,
-    'MODALIDAD' => "insitu",
-    'ID_CURSO' => 2,
-    'ID_PROGRAMACION' => 5
+    'MODALIDAD' => "programado",
+    'ID_CURSO' => 25,
+    'ID_PROGRAMACION' => 25
 ];
 /*
 iss = issuer, servidor que genera el token

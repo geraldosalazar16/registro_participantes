@@ -9,8 +9,8 @@ input[type="text"]
     background: none;
     padding: 0.175rem 0.175rem 0.0875rem;
     width: 85%;
-    font-size: 1.2rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.6;
     transition: all 0.28s ease;
     box-shadow: none;
     border: 0;
@@ -21,8 +21,8 @@ textarea
 {
     display: block;
     width: 85%;
-    font-size: 1.2rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.6;
     background: transparent;
     background-image: linear-gradient(transparent, transparent 24px, #ccc 0px);
     background-size: 100% 25px;
@@ -37,8 +37,8 @@ textarea
 .label_show{
     display: block;
     width: 85%;
-    font-size: 1.2rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.6;
     background: transparent;
     background-image: linear-gradient(transparent, transparent 24px, #ccc 0px);
     background-size: 100% 25px;

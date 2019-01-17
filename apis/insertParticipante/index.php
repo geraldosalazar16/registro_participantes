@@ -54,16 +54,20 @@ valida_parametro_and_die($ID, "Es necesario el ID_PROGRAMACION",null);
 $MODALIDAD= $objeto->MODALIDAD;
 valida_parametro_and_die($MODALIDAD, "Es necesario el ID_PROGRAMACION",null);
 
+$ESTADO= $objeto->ESTADO;
+
+
 $id = $database->insert("PARTICIPANTES", [
     "NOMBRE" => $NOMBRE,
     "EMAIL"=>	$EMAIL,
     "CURP" => $CURP,
-    "PERFIL" => $PERFIL
+    "PERFIL" => $PERFIL,
+    "ID_ESTADO" => $ESTADO
 ]);
 valida_error_medoo_and_die();
 
 if($id	!=	0) {
-    if($MODALIDAD == 'proragado'){
+    if($MODALIDAD == 'programado'){
 
         $id_p = $database->insert("CURSOS_PROGRAMADOS_PARTICIPANTES", [
             "ID_CURSO_PROGRAMADO" => $ID,
