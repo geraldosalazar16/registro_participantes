@@ -42,20 +42,24 @@ try{
     $decoded = JWT::decode($jwt, $key, $encrypt);
     //Validar iis = $global_apiserver
 //Validar que el issuer obtenido del token sea igual al que se usó
-//print_r(json_encode($decoded->iss==$global_apiserver));
+//print_r(json_encode($decoded->iss."--".$global_apiserver));
     if($decoded->iss == $global_apiserver) {
 
         $respuesta["validez"] = 'valido';
         $cliente = $database->get("CLIENTES", ["ID", "NOMBRE", "RFC","RFC_FACTURARIO","ES_FACTURARIO"], ["ID" => $decoded->data->ID_CLIENTE]);
         valida_error_medoo_and_die();
+        if(count($cliente)==0)
+            $respuesta["validez"] = 'invalido';
         $respuesta["CLIENTE"] = $cliente;
         $respuesta["MODALIDAD"] = $decoded->data->MODALIDAD;
         $fecha_inicio = null;
         $etapa = null;
 
         if ($decoded->data->MODALIDAD == "programado") {
-            $curso_programado = $database->get("CURSOS_PROGRAMADOS",["[><]CURSOS"=>["ID_CURSO"=>"ID_CURSO"]], ["CURSOS_PROGRAMADOS.ID","CURSOS_PROGRAMADOS.PERSONAS_MINIMO","CURSOS_PROGRAMADOS.ETAPA","CURSOS_PROGRAMADOS.FECHAS","CURSOS.NOMBRE"], ["ID" => $decoded->data->ID_PROGRAMACION]);
+            $curso_programado = $database->get("CURSOS_PROGRAMADOS",["[><]CURSOS"=>["ID_CURSO"=>"ID_CURSO"]], ["CURSOS_PROGRAMADOS.ID","CURSOS_PROGRAMADOS.PERSONAS_MINIMO","CURSOS_PROGRAMADOS.ETAPA","CURSOS_PROGRAMADOS.FECHAS","CURSOS.ID_CURSO","CURSOS.NOMBRE"], ["ID" => $decoded->data->ID_PROGRAMACION]);
             valida_error_medoo_and_die();
+            if(count($curso_programado)==0)
+                $respuesta["validez"] = 'invalido';
             $fechas = $curso_programado["FECHAS"];
             $fechas = explode("-", $fechas);
             $fecha_inicio = explode("/",$fechas[0]);
@@ -64,15 +68,20 @@ try{
             $curso_programado["NOMBRE_ETAPA"] = $etapa["ETAPA"];
             $etapa = $etapa["ETAPA"];
             $respuesta["CURSO"] = $curso_programado;
-            $respuesta["ID"] = $decoded->data->ID_CURSO;
-            $detalles = $database->select("CURSOS_PROGRAMADOS_DETALLE",["DETALLE","VALOR"],["ID_CURSO"=>$decoded->data->ID_CURSO]);
+            $respuesta["ID"] = $decoded->data->ID_PROGRAMACION;
+            $detalles = $database->select("CURSOS_PROGRAMADOS_DETALLE",["DETALLE","VALOR"],["ID_CURSO"=>$decoded->data->ID_PROGRAMACION]);
             valida_error_medoo_and_die();
             $aux = [];
             foreach ($detalles as $detalle)
             {
                 $aux[$detalle["DETALLE"]] = $detalle["VALOR"];
             }
+            $respuesta["EDIT"] = (count($aux)>0?true:false);
             $respuesta["DETALLES"] = $aux;
+
+            $cantidad  = $database->get("CLIENTE_CURSOS_PROGRAMADOS",["CANTIDAD_PARTICIPANTES"],["AND"=>["ID_CURSO_PROGRAMADO"=>$decoded->data->ID_PROGRAMACION,"ID_CLIENTE"=>$cliente["ID"]]]);
+            valida_error_medoo_and_die();
+            $respuesta["CANTIDAD_PARTICIPANTES"] = $cantidad["CANTIDAD_PARTICIPANTES"];
 
 
 
@@ -80,6 +89,8 @@ try{
         if ($decoded->data->MODALIDAD == "insitu") {
             $curso = $database->get("SCE_CURSOS",["[><]CURSOS"=>["ID_CURSO"=>"ID_CURSO"]], ["SCE_CURSOS.ID_SITIO","SCE_CURSOS.FECHA_INICIO","CURSOS.ID_CURSO","CURSOS.NOMBRE"], ["ID_SCE" => $decoded->data->ID_PROGRAMACION]);
             valida_error_medoo_and_die();
+            if(count($curso)==0)
+                $respuesta["validez"] = 'invalido';
             $fecha_inicio = date("Ymd", strtotime($curso["FECHA_INICIO"]));
             $sede = $database->get("SCE_CURSOS" ,["[><]CLIENTES_DOMICILIOS"=>["ID_SITIO"=>"ID"]],["NOMBRE_DOMICILIO","CALLE","NUMERO_EXTERIOR","NUMERO_INTERIOR","COLONIA_BARRIO","DELEGACION_MUNICIPIO"],["AND"=>["ID_SCE"=>$decoded->data->ID_PROGRAMACION,"ID_CURSO"=>$decoded->data->ID_CURSO]]);
             valida_error_medoo_and_die();
@@ -98,9 +109,16 @@ try{
             {
                 $aux[$detalle["DETALLE"]] = $detalle["VALOR"];
             }
+
+             $respuesta["EDIT"] = (count($aux)>0?true:false);
+
             $respuesta["DETALLES"] = $aux;
 
+            $cantidad  = $database->get("SERVICIO_CLIENTE_ETAPA",["CANTIDAD_PARTICIPANTES"],["ID"=>$decoded->data->ID_PROGRAMACION]);
+            valida_error_medoo_and_die();
+            $respuesta["CANTIDAD_PARTICIPANTES"] = $cantidad["CANTIDAD_PARTICIPANTES"];
         }
+
         $hoy = date("Ymd");
         $flag = false;
         if($hoy>$fecha_inicio){$flag = true;}
@@ -122,8 +140,9 @@ try{
                 $contactos[$c]["TEXTO"] = $contactos[$c]["NOMBRE_CONTACTO"].($contactos[$c]["TELEFONO_FIJO"]?", Telefono: ".$contactos[$c]["TELEFONO_FIJO"]:$contactos[$c]["TELEFONO_MOVIL"]).($contactos[$c]["EMAIL"]?", email: ".$contactos[$c]["EMAIL"]:"");
             }
 
-            $domicilios_aux[$i]["CONTACTOS"] = $contactos;
-            $domicilios_aux[$i]["CC"] = count($contactos);
+                 $domicilios_aux[$i]["CONTACTOS"] = $contactos;
+                 $domicilios_aux[$i]["CC"] = count($contactos);
+
 
         }
 

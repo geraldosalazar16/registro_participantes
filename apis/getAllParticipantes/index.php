@@ -40,14 +40,22 @@ valida_parametro_and_die($ID, "Es necesario introducir un ID",null);
 
 $MODALIDAD = $objeto->MODALIDAD ;
 valida_parametro_and_die($MODALIDAD , "Es necesario introducir un ID",null);
+
+$ID_CLIENTE = $objeto->ID_CLIENTE ;
+valida_parametro_and_die($ID_CLIENTE , "Es necesario introducir un ID_CLIENTE",null);
+
+$ID_CURSO = $objeto->ID_CURSO ;
+valida_parametro_and_die($ID_CURSO , "Es necesario introducir un ID_CURSO",null);
+
 $participantes = [];
 if($MODALIDAD == "programado"){
 
-    $participantes = $database->select("CURSOS_PROGRAMADOS_PARTICIPANTES",["[><]PARTICIPANTES"=>["ID_PARTICIPANTE"=>"ID"]],["ID","NOMBRE","EMAIL","CURP","PERFIL"],["ID_CURSO_PROGRAMADO"=>$ID]);
+    $participantes = $database->select("CURSOS_PROGRAMADOS_PARTICIPANTES",["[><]PARTICIPANTES"=>["ID_PARTICIPANTE"=>"ID"]],["ID","NOMBRE","EMAIL","TELEFONO","CURP","PERFIL"],["AND"=>["ID_CURSO_PROGRAMADO"=>$ID,"ID_CLIENTE"=>$ID_CLIENTE]]);
+    valida_error_medoo_and_die();
 }
 if($MODALIDAD == "insitu"){
-    $participantes = $database->select("SCE_PARTICIPANTES",["[><]PARTICIPANTES"=>["ID_PARTICIPANTE"=>"ID"]],["ID","NOMBRE","EMAIL","CURP","PERFIL"],["ID_SCE"=>$ID]);
-
+    $participantes = $database->select("SCE_PARTICIPANTES",["[><]PARTICIPANTES"=>["ID_PARTICIPANTE"=>"ID"]],["ID","NOMBRE","EMAIL","TELEFONO","CURP","PERFIL"],["AND"=>["ID_SCE"=>$ID,"ID_CURSO"=>$ID_CURSO]]);
+    valida_error_medoo_and_die();
 }
 
 

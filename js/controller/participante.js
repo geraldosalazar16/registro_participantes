@@ -24,10 +24,12 @@ angular.module('myApp', []).controller('participanteController', function($scope
   $scope.cantidad_domicilios = 0;
   $scope.cantidad_contacto = 0;
   $scope.cantidad_insertados = 0; // cantidad de participantes insertados
-  $scope.total = 5; //cantidad total de participantes que tiene registrado ese curso
+  $scope.total = 0; //cantidad total de participantes que tiene registrado ese curso
   $scope.show_p = false;
   $scope.formData.medio = "";
   $scope.isdisabled = false;
+  $scope.isedit = false;
+  $scope.title_form_participante = "Agregar Participante";
 
 
   $scope.token = getQueryVariable("token");
@@ -51,12 +53,14 @@ $scope.verificaToken = function () {
             $scope.modalidad = respuesta.MODALIDAD;
             $scope.datosCurso = respuesta.CURSO;
             $scope.datosDomicilios = respuesta.DOMICILIOS;
-            $scope.datosContactos = respuesta.DOMICILIOS[0].CONTACTOS;
+            $scope.datosContactos = (respuesta.DOMICILIOS.length>0?respuesta.DOMICILIOS[0].CONTACTOS:{});
             $scope.ID = respuesta.ID;
             $scope.detalles = respuesta.DETALLES;
+            $scope.isedit = respuesta.EDIT;
             $scope.cantidad_domicilios = respuesta.CD;
-            $scope.cantidad_contacto = respuesta.DOMICILIOS[0].CC;
+            $scope.cantidad_contacto = (respuesta.DOMICILIOS.length>0?respuesta.DOMICILIOS[0].CC:0);
             $scope.isdisabled = respuesta.DISABLED;
+            $scope.total = respuesta.CANTIDAD_PARTICIPANTES;
             $scope.cargarDetalles();
             $scope.cargaParticipantes();
             $scope.$apply();
@@ -89,53 +93,58 @@ $scope.verificaToken = function () {
 // ***** 	  FUNCION PARA CARGAR DETALLES GUARDADOS		 *****
 // ===================================================================
     $scope.cargarDetalles = function(){
-         $scope.formData.necesidades = $scope.detalles.NECESIDADES;
 
-         if($scope.detalles.ISFACTURACION)
-         {
-             $scope.formData.facturacion = $scope.detalles.ISFACTURACION;
-             $scope.edit = true;
-         }
-
-         if($scope.formData.facturacion=="SI")
-         {
-                 $scope.editf = true;
-
-                 $scope.formData.otro_domicilio = $scope.detalles.DOMICILIO;
-
-                 $scope.formData.rfc_facturario = $scope.detalles.RFC_FACTURARIO;
-
-                 var contacto = $scope.detalles.CONTACTO.split(",");
-                 $scope.formData.otro_contacto_nombre = contacto[0];
-                 $scope.formData.otro_contacto_telefono = contacto[1];
-                 $scope.formData.otro_contacto_email = contacto[2];
-
-         }
-         else
-         {
-             $scope.editf = false;
-         }
-
-        $scope.formData.medio = $scope.detalles.MEDIO;
-        $scope.formData.sede_curso = $scope.detalles.SEDE;
-        $scope.formData.hora_inicio = $scope.detalles.HORA_INICIO;
-        $scope.formData.hora_fin = $scope.detalles.HORA_FIN;
-        $scope.formData.recomendacion_hospedaje = $scope.detalles.HOSPEDAJE;
-        $scope.formData.recomendacion_transporte = $scope.detalles.TRASPORTE;
-        if($scope.detalles.TRASLADO)
-        $scope.formData.disponibilidad_traslado = $scope.detalles.TRASLADO;
-        if($scope.detalles.ISMEDIDAS)
-        $scope.formData.select_medidas_proteccion = $scope.detalles.ISMEDIDAS;
-        var fecha = $scope.detalles.FECHA_CURSO;
-
-        $scope.formData.fecha_curso = (fecha?fecha.substring(6,8)+"/"+fecha.substring(4,6)+"/"+fecha.substring(0,4):'');
-
-        if($scope.formData.select_medidas_proteccion=="SI")
+        if($scope.isedit)
         {
-            $scope.formData.medidas_proteccion = $scope.detalles.MEDIDAS;
+            $scope.formData.necesidades = $scope.detalles.NECESIDADES;
+
+            if($scope.detalles.ISFACTURACION)
+            {
+                $scope.formData.facturacion = $scope.detalles.ISFACTURACION;
+                $scope.edit = true;
+            }
+
+            if($scope.formData.facturacion=="SI")
+            {
+                $scope.editf = true;
+
+                $scope.formData.otro_domicilio = $scope.detalles.DOMICILIO;
+
+                $scope.formData.rfc_facturario = $scope.detalles.RFC_FACTURARIO;
+
+                var contacto = $scope.detalles.CONTACTO.split(",");
+                $scope.formData.otro_contacto_nombre = contacto[0];
+                $scope.formData.otro_contacto_telefono = contacto[1];
+                $scope.formData.otro_contacto_email = contacto[2];
+
+            }
+            else
+            {
+                $scope.editf = false;
+            }
+
+            $scope.formData.medio = $scope.detalles.MEDIO;
+            $scope.formData.sede_curso = $scope.detalles.SEDE;
+            $scope.formData.hora_inicio = $scope.detalles.HORA_INICIO;
+            $scope.formData.hora_fin = $scope.detalles.HORA_FIN;
+            $scope.formData.recomendacion_hospedaje = $scope.detalles.HOSPEDAJE;
+            $scope.formData.recomendacion_transporte = $scope.detalles.TRASPORTE;
+            if($scope.detalles.TRASLADO)
+                $scope.formData.disponibilidad_traslado = $scope.detalles.TRASLADO;
+            if($scope.detalles.ISMEDIDAS)
+                $scope.formData.select_medidas_proteccion = $scope.detalles.ISMEDIDAS;
+            var fecha = $scope.detalles.FECHA_CURSO;
+
+            $scope.formData.fecha_curso = (fecha?fecha.substring(6,8)+"/"+fecha.substring(4,6)+"/"+fecha.substring(0,4):'');
+
+            if($scope.formData.select_medidas_proteccion=="SI")
+            {
+                $scope.formData.medidas_proteccion = $scope.detalles.MEDIDAS;
+            }
+
+            $scope.formData.estado_visita = $scope.detalles.ESTADO;
         }
 
-        $scope.formData.estado_visita = $scope.detalles.ESTADO;
 
 
     }
@@ -144,8 +153,10 @@ $scope.verificaToken = function () {
 // ================================================================================/
     $scope.onFacturacion = function()
     {
-       $scope.datosContactos = $scope.datosDomicilios[0].CONTACTOS;
-       $scope.cantidad_contacto = $scope.datosDomicilios[0].CC;
+       $scope.datosContactos = ($scope.datosDomicilios.length>0?$scope.datosDomicilios[0].CONTACTOS:{});
+
+       $scope.cantidad_contacto = ($scope.datosDomicilios.length>0?$scope.datosDomicilios[0].CC:0);
+
       /* $scope.domicilio_contacto = $scope.datosContactos[0];
        alert(JSON.stringify($scope.datosContactos[0]));*/
 
@@ -186,8 +197,13 @@ $scope.verificaToken = function () {
         $scope.formData.otro_contacto_nombre = "";
         $scope.formData.otro_contacto_telefono = "";
         $scope.formData.otro_contacto_email= "";
+
         if(!flag)
         {
+            $scope.error_otro_contacto_nombre = "";
+            $scope.error_otro_contacto_telefono = "";
+            $scope.error_otro_contacto_email = "";
+
             if($scope.edit == true)
             {
                 var contacto = $scope.detalles.CONTACTO.split(",");
@@ -341,8 +357,7 @@ $scope.verificaToken = function () {
 //////////////////////////////////////////////////////////////////////////////////////////////
         if($scope.formData.facturacion == "SI")
         {
-
-            if($scope.oc == true || $scope.edit==true)
+            if($scope.oc == true || $scope.edit==true || $scope.cantidad_contacto == 0)
             {
 
               if(typeof $scope.formData.otro_contacto_email !== "undefined") {
@@ -509,8 +524,13 @@ $scope.verificaToken = function () {
 // =======================================================================================================
    $scope.insertar = function () {
        $scope.enviar = true;
-       var fecha = $scope.formData.fecha_curso;
-       fecha = fecha.substring(6,10)+fecha.substring(3,5)+fecha.substring(0,2);
+       var fecha = "";
+       if($scope.modalidad=='insitu')
+       {
+           fecha = $scope.formData.fecha_curso;
+           fecha = fecha.substring(6,10)+fecha.substring(3,5)+fecha.substring(0,2);
+       }
+
         var datos = {
            ID: $scope.ID,
            NECESIDADES:$scope.formData.necesidades,
@@ -529,7 +549,7 @@ $scope.verificaToken = function () {
            TRASLADO:($scope.modalidad=='insitu'?$scope.formData.disponibilidad_traslado:""),
            ISMEDIDAS:($scope.modalidad=='insitu'?$scope.formData.select_medidas_proteccion:""),
            MEDIDAS:($scope.modalidad=='insitu'?(typeof $scope.formData.medidas_proteccion !== "undefined"?$scope.formData.medidas_proteccion:''):""),
-           FECHA_CURSO:($scope.modalidad=='insitu'?fecha:""),
+           FECHA_CURSO:fecha,
            ESTADO:($scope.modalidad=='programado'? $scope.formData.estado_visita:""),
 
 
@@ -539,7 +559,9 @@ $scope.verificaToken = function () {
            respuesta = JSON.parse(respuesta);
            if (respuesta.resultado == "ok") {
                  $scope.mensaje_success = "Los datos del formulario fueron enviados con exito";
-                 $("#mensaje_success_id").focus();
+               $scope.verificaToken();
+               $("html, body").animate({ scrollTop: 0 }, "slow");
+
            }
            else
            {
@@ -567,16 +589,18 @@ $scope.verificaToken = function () {
     function clear_form_participante(){
         $scope.formDataParticipante.nombre_participante = '';
         $scope.formDataParticipante.email_participante = '';
+        $scope.formDataParticipante.telefono_participante = '';
         $scope.formDataParticipante.curp_participante = "";
         $scope.formDataParticipante.perfil_participante = "";
 
         /* $("#btnInstructor").attr("value","Selecciona un Instructor");
          $("#btnInstructor").attr("class", "form-control btn ");*/
 
-        $("#error_nombre_participante").text("");
-        $("#error_email_participante").text("");
-        $("#error_curp_participante").text("");
-        $("#error_perfil_participante").text("");
+        $scope.error_nombre_participante = "";
+        $scope.error_email_participante = "";
+        $scope.error_telefono_participante = "";
+        $scope.error_curp_participante = "";
+        $scope.error_perfil_participante = "";
 
     }
 
@@ -640,30 +664,33 @@ $scope.validar_rfc = function(input)
 // *****                       Función para validar CURP                    		 *****
 // =======================================================================================
     $scope.curpValida = function(input) {
-        var curp = input;
-        var re = /^([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0\d|1[0-2])(?:[0-2]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)$/,
-            validado = curp.match(re);
+        if(typeof input !== "undefined") {
+            var curp = input;
+            var re = /^([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0\d|1[0-2])(?:[0-2]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)$/,
+                validado = curp.match(re);
 
-        if (!validado)  //Coincide con el formato general?
-            return false;
+            if (!validado)  //Coincide con el formato general?
+                return false;
 
-        //Validar que coincida el dígito verificador
-        function digitoVerificador(curp17) {
-            //Fuente https://consultas.curp.gob.mx/CurpSP/
-            var diccionario  = "0123456789ABCDEFGHIJKLMNÑOPQRSTUVWXYZ",
-                lngSuma      = 0.0,
-                lngDigito    = 0.0;
-            for(var i=0; i<17; i++)
-                lngSuma= lngSuma + diccionario.indexOf(curp17.charAt(i)) * (18 - i);
-            lngDigito = 10 - lngSuma % 10;
-            if(lngDigito == 10)
-                return 0;
-            return lngDigito;
-        }
-        if (validado[2] != digitoVerificador(validado[1]))
-            return false;
+            //Validar que coincida el dígito verificador
+            function digitoVerificador(curp17) {
+                //Fuente https://consultas.curp.gob.mx/CurpSP/
+                var diccionario = "0123456789ABCDEFGHIJKLMNÑOPQRSTUVWXYZ",
+                    lngSuma = 0.0,
+                    lngDigito = 0.0;
+                for (var i = 0; i < 17; i++)
+                    lngSuma = lngSuma + diccionario.indexOf(curp17.charAt(i)) * (18 - i);
+                lngDigito = 10 - lngSuma % 10;
+                if (lngDigito == 10)
+                    return 0;
+                return lngDigito;
+            }
 
-        return true; //Validado
+            if (validado[2] != digitoVerificador(validado[1]))
+                return false;
+
+            return true; //Validado
+        }else return false;
     }
  // ================================================================================
 // *****                  Funcion validar fecha                  *****
@@ -727,16 +754,20 @@ $scope.validar_rfc = function(input)
 // =======================================================================================================
     $scope.submitFormParticipante = function (accion) {
         validar_formulario_participante();
+
+
         if($scope.respuesta == 1){
 
             if(accion=='insertar')
             {
                 $scope.insertaParticipantes();
+
             }
 
             if(accion=='editar')
             {
                 $scope.editaParticipantes();
+
             }
 
 
@@ -747,15 +778,30 @@ $scope.validar_rfc = function(input)
 // *****    Accion al presionar button agregar participantes		 *****
 // =======================================================================================================
     $scope.insertaParticipantes= function () {
+
+        var estado = "";
+        //alert($scope.modalidad);
+        if($scope.modalidad=='programado')
+        {
+            if (typeof $scope.formData.estado_visita !== "undefined") {
+                estado = $scope.formData.estado_visita;
+            }
+        }
+
+
         var add = {
             NOMBRE: $scope.formDataParticipante.nombre_participante,
             EMAIL: $scope.formDataParticipante.email_participante,
+            TELEFONO: $scope.formDataParticipante.telefono_participante,
             CURP: $scope.formDataParticipante.curp_participante,
             PERFIL: $scope.formDataParticipante.perfil_participante,
             MODALIDAD: $scope.modalidad,
             ID: $scope.ID,
-            ESTADO:($scope.modalidad=='programado'?$scope.formData.estado_visita:"")
-        }
+            ID_CLIENTE:$scope.datosCliente.ID,
+            ID_CURSO:$scope.datosCurso.ID_CURSO,
+            ESTADO:estado
+        };
+         //alert(JSON.stringify(add));
         if (!$scope.existeParticipante(add)) {
             $.post(global_apiserver + "/insertParticipante/", JSON.stringify(add), function (respuesta) {
                 respuesta = JSON.parse(respuesta);
@@ -766,14 +812,28 @@ $scope.validar_rfc = function(input)
 
                 }
                 else {
-                    for (var i = 0; i < respuesta.mensaje.length; i++) {
-                        var result = respuesta.mensaje[i].split("|");
+                        var result = respuesta.mensaje.split("|");
                         if (result.length == 2)
-                            eval("$scope." + result[0] + "=" + result[1]);
+                        {
+                            eval("$scope." + result[0] + "='" + result[1] +"'");
+                            if(result[0]=="error_limite")
+                            {
+                                $scope.isdisabled = true;
+
+                               // $scope.error_limite =  result[1];
+
+
+                            }
+                            $scope.$apply();
+
+
+                        }
+
                         else {
                             $scope.mensaje = result[0];
                         }
-                    }
+
+
 
                 }
 
@@ -788,6 +848,7 @@ $scope.validar_rfc = function(input)
                 ID:$scope.id_participante,
                 NOMBRE: $scope.formDataParticipante.nombre_participante,
                 EMAIL: $scope.formDataParticipante.email_participante,
+                TELEFONO: $scope.formDataParticipante.telefono_participante,
                 CURP: $scope.formDataParticipante.curp_participante,
                 PERFIL: $scope.formDataParticipante.perfil_participante
 
@@ -834,7 +895,11 @@ $scope.validar_rfc = function(input)
     {
         if(confirm("¿Estás seguro que desea eliminar este participante?")) {
             var campos = {
-                ID: $scope.id_participante
+                ID_PARTICIPANTE: $scope.id_participante,
+                ID_CLIENTE:$scope.datosCliente.ID,
+                ID_CURSO:$scope.datosCurso.ID_CURSO,
+                MODALIDAD:$scope.modalidad,
+                ID:$scope.ID
             }
             $.post(global_apiserver + "/deleteParticipante/", JSON.stringify(campos), function (respuesta) {
                 respuesta = JSON.parse(respuesta);
@@ -843,6 +908,8 @@ $scope.validar_rfc = function(input)
                     $scope.cargaParticipantes();
                     $scope.show_p = false;
                     $scope.id_participante = "";
+                    $scope.accion = 'insertar';
+                    $scope.title_form_participante = "Agregar Participante";
                 }
                 else {
                     for (var i = 0; i < respuesta.mensaje.length; i++) {
@@ -866,9 +933,11 @@ $scope.validar_rfc = function(input)
     {
         var campos = {
             MODALIDAD: $scope.modalidad,
-            ID:$scope.ID
+            ID:$scope.ID,
+            ID_CLIENTE:$scope.datosCliente.ID,
+            ID_CURSO:$scope.datosCurso.ID_CURSO
         }
-
+        //alert(JSON.stringify(campos));
         $.post(global_apiserver + "/getAllParticipantes/", JSON.stringify(campos), function (respuesta) {
             respuesta = JSON.parse(respuesta);
             $scope.participantes = respuesta;
@@ -883,49 +952,62 @@ $scope.validar_rfc = function(input)
     $scope.existeParticipante = function(p)
     {
         var flag = false;
-        var mensaje = "";
         for(var i = 0 ; i < $scope.participantes.length ; i++)
         {
 
-            if($scope.participantes[i].NOMBRE == p.NOMBRE)
+            if($scope.participantes[i].NOMBRE == p.NOMBRE && $scope.participantes[i].EMAIL == p.EMAIL && $scope.participantes[i].TELEFONO == p.TELEFONO && $scope.participantes[i].CURP == p.CURP)
            {
-              flag = true;
-              mensaje = mensaje+" [ Existe un  participante con ese nombre ] \n";
+               $scope.mensaje = "Ya existe un participante con esos datos";
+               flag = true;
 
+               //$('#nombre_participante').focus();
+               break;
            }
-          if($scope.participantes[i].EMAIL == p.EMAIL)
-           {
-            flag = true;
-               mensaje =  mensaje+" [ Existe un participante con ese correo electrónico ] \n";
 
-           }
-           if($scope.participantes[i].CURP == p.CURP)
-            {
-                flag = true;
-                mensaje =  mensaje+" [ Existe un  participante con ese curp ] \n";
-
-            }
-        }
-        if(flag==true)
-        {
-            $scope.mensaje = mensaje;
         }
         return flag;
+
+    }
+
+// =======================================================================================================
+// *****    Accion al presionar button cancelar participantes		 *****
+// =======================================================================================================
+    $scope.onChangeCURP= function () {
+        $scope.error_curp_participante=($scope.curpValida($scope.formDataParticipante.curp_participante)?'':'CURP Inválido');
+    }
+// =======================================================================================================
+// *****    Accion al presionar button cancelar participantes		 *****
+// =======================================================================================================
+    $scope.cancelEditParticipantes= function () {
+            $scope.show_p = false;
+            $scope.accion  = "";
+            clear_form_participante();
     }
 
 // =======================================================================================================
 // *****    Accion al presionar button editar participantes		 *****
 // =======================================================================================================
     $scope.showEditParticipantes= function (pos) {
+        clear_form_participante();
         if (typeof pos !== "undefined")
         {
            $scope.show_p = true;
            $scope.accion  = "editar";
+            $scope.title_form_participante = "Editar Participante";
            $scope.id_participante  = $scope.participantes[pos].ID;
            $scope.formDataParticipante.nombre_participante = $scope.participantes[pos].NOMBRE;
            $scope.formDataParticipante.email_participante = $scope.participantes[pos].EMAIL;
+           $scope.formDataParticipante.telefono_participante = $scope.participantes[pos].TELEFONO;
            $scope.formDataParticipante.curp_participante = $scope.participantes[pos].CURP;
            $scope.formDataParticipante.perfil_participante = $scope.participantes[pos].PERFIL;
+
+            setTimeout(function(){
+                $('#nombre_participante').focus();
+            },1000); //delay is in milliseconds
+
+
+
+
         }
 
     }
@@ -935,6 +1017,11 @@ $scope.validar_rfc = function(input)
     $scope.showFormP = function()
     {
         $scope.show_p = true;
+        $scope.accion  = "insertar";
+        $scope.title_form_participante = "Agregar Participante";
+        setTimeout(function(){
+            $('#nombre_participante').focus();
+        },1000); //delay is in milliseconds
     }
 // =======================================================================================
 // *****     Función para validar los campos del formulario antes de Guardar		 *****
@@ -979,6 +1066,31 @@ $scope.validar_rfc = function(input)
             $scope.respuesta = 0;
             $scope.error_curp_participante = "Complete este campo";
             setfocus = "curp_participante";
+        }
+ /////////////////////////////////////////////////////////////////////////////////////////
+        if(typeof $scope.formDataParticipante.telefono_participante !== "undefined") {
+            if ($scope.formDataParticipante.telefono_participante.length == 0) {
+                $scope.respuesta = 0;
+                $scope.error_telefono_participante = "Complete este campo";
+                setfocus = "telefono_participante";
+            } else {
+
+                if($scope.validar_telefono($scope.formDataParticipante.telefono_participante))
+                {
+                    $scope.error_telefono_participante = "";
+                }
+                else
+                {
+                    $scope.respuesta = 0;
+                    $scope.error_telefono_participante = "Telefono inválido";
+                    setfocus = "telefono_participante";
+
+                }
+            }
+        }else {
+            $scope.respuesta = 0;
+            $scope.error_telefono_participante = "Complete este campo";
+            setfocus = "telefono_participante";
         }
  /////////////////////////////////////////////////////////////////////////////////////////
         if(typeof $scope.formDataParticipante.email_participante !== "undefined") {
@@ -1026,17 +1138,36 @@ $scope.validar_rfc = function(input)
         }
     }
 
-function mytoggle(id)
-{
-    $("#"+id).toggle(function(){
 
-    },function(){
-
-    });
-}
 function loadDatePicker() {
 
-   var fecha =  $('#fecha_curso').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY', minDate : new Date() });
+    $('#fecha_curso').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY', minDate : new Date(), lang : 'es',time: false })
+        .on('change', function(e, date)
+    {
+        $scope.formData.fecha_curso = date.format("DD/MM/YYYY");
+    });
+
+    /*var nowTemp = new Date();
+
+    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate()-1, 0, 0, 0, 0);
+
+
+    var checkin = $('#fecha_curso').fdatepicker({
+        onRender: function (date) {
+            return date.valueOf() <= now.valueOf() ? 'disabled' : '';
+        },
+        format: 'dd/mm/yyyy',
+        language: 'es',
+        disableDblClickSelection: true,
+        //initialDate: new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0),
+        closeButton: true,
+        closeIcon: 'X',
+        leftArrow: '<',
+        rightArrow: '>'
+    }).on('changeDate', function (ev) {
+        alert(ev.date.valueOf());
+        $scope.formData.fecha_curso = ev.date.valueOf();
+    }).data('datepicker');*/
 
 
 }
@@ -1059,15 +1190,15 @@ $scope.mostrarMensaje  = function (title,mensaje) {
       $scope.verificaToken();
       $scope.cargarEstados();
 
-
-      $(function () {
-          var fecha =  $('#fecha_curso').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY', minDate : new Date() });
-      })
-
+      setTimeout(function () {
+          loadDatePicker();
+      }, 1000);
 
 
       //$('[data-toggle="tooltip"]').tooltip();
-      $('body').tooltip({ selector: '[data-toggle="tooltip"]' });
+      $('body').tooltip({ selector: '[data-toggle="tooltip"]'});
+     // $('body').fdatepicker({ });
+
 
   });
 

@@ -42,6 +42,9 @@ valida_parametro_and_die($NOMBRE, "Complete este campo","error_nombre_participan
 $EMAIL= $objeto->EMAIL;
 valida_parametro_and_die($EMAIL, "Complete este campo","error_email_participante");
 
+$TELEFONO= $objeto->TELEFONO;
+valida_parametro_and_die($TELEFONO, "Complete este campo","error_telefono_participante");
+
 $CURP= $objeto->CURP;
 valida_parametro_and_die($CURP, "Complete este campo","error_curp_participante");
 
@@ -54,6 +57,7 @@ valida_parametro_and_die($ID, "Es necesario el ID_PROGRAMACION",null);
 $id = $database->update("PARTICIPANTES", [
     "NOMBRE" => $NOMBRE,
     "EMAIL"=>	$EMAIL,
+    "TELEFONO"=>	$TELEFONO,
     "CURP" => $CURP,
     "PERFIL" => $PERFIL
 ],["ID"=>$ID]);

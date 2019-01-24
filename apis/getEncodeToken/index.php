@@ -33,22 +33,26 @@ function valida_error_medoo_and_die(){
 }
 
 $respuesta = array();
+$key = "imnc2018$$1";
+$encrypt = array('HS256');
+$duration = 60*60*24*30;
 
 //payload
 $data = [
-    'ID_CLIENTE' => 140,
-    'MODALIDAD' => "programado",
-    'ID_CURSO' => 25,
-    'ID_PROGRAMACION' => 25
+    'ID_CLIENTE' => 436,
+    'MODALIDAD' => "insitu",
+    'ID_CURSO' => 1,
+    'ID_PROGRAMACION' => 18
 ];
 /*
 iss = issuer, servidor que genera el token
 data = payload del JWT */
 $token = array(
-    "iss" => $global_apiserver,
-    "data" => $data
+    'iss' => $global_apiserver,
+    'aud' => $global_apiserver,
+    'exp' => time() + $duration,
+    'data' => $data
 );
-$key = "imnc2018$$1";;
 //Codifica la información usando el $key definido en jwt.php
 $jwt = JWT::encode($token, $key);
 $respuesta["token"] = $jwt;

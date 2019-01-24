@@ -36,15 +36,29 @@ $respuesta=array();
 $json = file_get_contents("php://input");
 $objeto = json_decode($json);
 
+$ID_PARTICIPANTE= $objeto->ID_PARTICIPANTE;
+valida_parametro_and_die($ID_PARTICIPANTE, "Es necesario el ID_PARTICIPANTE",null);
+
+$ID_CLIENTE= $objeto->ID_CLIENTE;
+valida_parametro_and_die($ID_CLIENTE, "Es necesario el ID_CLIENTE",null);
+
+$ID_CURSO= $objeto->ID_CURSO;
+valida_parametro_and_die($ID_CURSO, "Es necesario el ID_CURSO",null);
+
 $ID= $objeto->ID;
 valida_parametro_and_die($ID, "Es necesario el ID_PROGRAMACION",null);
 
-$id = $database->delete("PARTICIPANTES", ["ID"=>$ID]);
+$MODALIDAD= $objeto->MODALIDAD;
+valida_parametro_and_die($MODALIDAD, "Es necesario la MODALIDAD",null);
+
+$id = $database->delete("PARTICIPANTES", ["ID"=>$ID_PARTICIPANTE]);
 valida_error_medoo_and_die();
 if($id != 0)
 {
-    $idcp = $database->delete("CURSOS_PROGRAMADOS_PARTICIPANTES", ["ID_PARTICIPANTE"=>$ID]);
-    $idsce = $database->delete("SCE_PARTICIPANTES", ["ID_PARTICIPANTE"=>$ID]);
+    if($MODALIDAD=="programado")
+    $idcp = $database->delete("CURSOS_PROGRAMADOS_PARTICIPANTES", ["AND"=>["ID_PARTICIPANTE"=>$ID_PARTICIPANTE,"ID_CURSO_PROGRAMADO"=>$ID,"ID_CLIENTE"=>$ID_CLIENTE]]);
+    if($MODALIDAD=="insitu")
+    $idsce = $database->delete("SCE_PARTICIPANTES", ["AND"=>["ID_PARTICIPANTE"=>$ID_PARTICIPANTE,"ID_SCE"=>$ID,"ID_CURSO"=>$ID_CURSO]]);
 }
 
 $respuesta["resultado"]="ok";

@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
     <link rel="stylesheet" type="text/css" href="css/doc.css" >
     <link rel="stylesheet" type="text/css" href="css/bootstrap-material-datetimepicker.css" >
+   <!-- <link rel="stylesheet" type="text/css" href="css/foundation-datepicker.css" > -->
      <script src="js/angular.min.js"></script>
      <script src="js/controller/participante.js"></script>
      <script src="js/notify.js"></script>
@@ -40,7 +41,7 @@
          </div>
      </div>
      <div class="row" ><div style="background-color: #846125;"><h5 class="text-uppercase" style="margin-left: 45px; color: white;margin-top: 7px;">INFORMACIóN</h5></div><img style="height: 40px;" src="image/parte.png"></div>
-         <input name="mensaje_success_id" ng-show="false">
+         <div class="alert alert-success"style="margin-top: 10px;" ng-show="mensaje_success">{{mensaje_success}}</div>
          <ul class="list-group list-group-flush" style="margin-top: 10px;">
              <li class="list-group-item text-uppercase">CLIENTE: {{datosCliente.NOMBRE}} </li>
              <li class="list-group-item text-uppercase">CURSO: {{ datosCurso.NOMBRE }}</li>
@@ -57,10 +58,10 @@
 
      </div>
      <div class="alert alert-danger" ng-show="isdisabled">Este formulario ya no se puede editar, este curso ya no permite inscripción, por favor consulte con el IMNC</div>
-     <div class="alert alert-success" ng-show="mensaje_success">{{mensaje_success}}</div>
+
 
      <div class="row text-uppercase"><div style="background-color: #846125;"><h5 style="margin-left: 45px; color: white;margin-top: 7px;">NOS GUSTARíA CONOCER</h5></div><img style="height: 40px;" src="image/parte.png"></div>
-         <form>
+         <form id="inscricion_form">
          <div class="container-fluid" style="padding-top: 20px;">
 
              <div style=" {{(error_necesidades?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}">
@@ -83,7 +84,7 @@
                                  <a href="" class="float-right" ng-click="otroDomicilio(false);error_otro_domicilio='';" ng-show="od == true" ng-if="!isdisabled"><small>Cancelar</small></a>
                                  <select id="domicilio_fiscal" name="domicilio_fiscal"ng-init="formData.domicilio_fiscal = datosDomicilios[0]" ng-model="formData.domicilio_fiscal" ng-options="d.NOMBRE for d in datosDomicilios track by d.NOMBRE" style="width:90%;" ng-show="od != true && cantidad_domicilios > 0" ng-change="onDomicilio()" required ng-disabled="isdisabled">
                                  </select>
-                                 <input type="text" id="otro_domicilio" name="otro_domicilio" ng-change="error_otro_domicilio = (formData.otro_domicilio?'':'Complete este campo')" ng-model="formData.otro_domicilio" ng-show="od == true || cantidad_domicilios == 0" placeholder="Tu respuesta" required data-toggle="tooltip" data-placement="right" title="{{(od == true?'Escriba otro domicilio aquí':'')}}" ng-init="formData.otro_domicilio = formData.domicilio_fiscal.NOMBRE" >
+                                 <input type="text" id="otro_domicilio" name="otro_domicilio" ng-change="error_otro_domicilio = (formData.otro_domicilio?'':'Complete este campo')" ng-model="formData.otro_domicilio" ng-show="od == true || cantidad_domicilios == 0" placeholder="Tu respuesta" required data-toggle="tooltip" data-placement="right" title="{{(od == true?'Escriba otro domicilio aquí':'')}}" ng-init="formData.otro_domicilio = formData.domicilio_fiscal.NOMBRE">
                                  <small class="text-danger">{{error_otro_domicilio}}</small>
                              </div>
                              <div class="form-group" style="margin-top: 20px; {{(error_otro_domicilio?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}" ng-if="editf == true">
@@ -109,12 +110,13 @@
                                  <small class="text-danger">{{(error_rfc_facturario)}}</small>
                              </div>
 
-                             <div class="form-group" style="{{((error_otro_contacto_nombre||error_otro_contacto_telefono||error_otro_contacto_email)?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}" ng-if="editf != true">
+                             <div class="form-group" style="{{((error_domicilio_contacto||error_otro_contacto_nombre||error_otro_contacto_telefono||error_otro_contacto_email)?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}" ng-if="editf != true">
                                  <label for="domicilio_contacto" ><h5>Contacto <label class="text-danger">*</label></h5></label>
                                  <a href="" class="float-right" ng-click="otroContacto(true)" ng-show="oc != true && cantidad_contacto  > 0" ng-if="!isdisabled "><small>Otro Contacto</small></a>
                                  <a href="" class="float-right" ng-click="otroContacto(false);error_otro_contacto_nombre='';error_otro_contacto_telefono='';error_otro_contacto_email=''" ng-show="oc == true && cantidad_contacto  > 0" ng-if="!isdisabled"><small>Cancelar</small></a>
                                 <select id="domicilio_contacto" name="domicilio_contacto" ng-init="formData.domicilio_contacto = datosContactos[0]"  ng-model="formData.domicilio_contacto" ng-options="c as c.TEXTO for c in datosContactos" style="width:90%;" ng-show="oc != true && cantidad_contacto  > 0" required ng-disabled="isdisabled">
                                  </select>
+                                 <br>
                                  <small class="text-danger" style="margin-bottom: 20px;" >{{error_domicilio_contacto}}</small>
                                  <input type="text" id="otro_contacto_nombre" name="otro_contacto_nombre" ng-change="error_otro_contacto_nombre = (formData.otro_contacto_nombre?'':'Complete este campo')" ng-model="formData.otro_contacto_nombre" ng-show="oc == true || cantidad_contacto == 0" placeholder="Nombre del contacto" required data-toggle="tooltip" data-placement="right" title="{{(oc == true?'Escriba el nombre del contacto aquí':'')}}" ng-init="formData.otro_contacto_nombre = formData.domicilio_contacto.NOMBRE_CONTACTO" >
                                  <small class="text-danger" style="margin-bottom: 20px;">{{error_otro_contacto_nombre}}</small>
@@ -179,7 +181,7 @@
              <div id="insitu" ng-show="modalidad == 'insitu'">
              <div class="form-group" style="{{((error_sede)?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}" ng-if="edit != true">
                  <label for="sede_curso"><h5>Sede del curso: <label class="text-danger">*</label></h5></label>
-                 <a href="" class="float-right" ng-click="otraSede(true)" ng-show="sede != true" ng-if="!isdisabled"><small>Otra Sede</small></a>
+                 <a href="" class="float-right" ng-click="otraSede(true)" ng-show="sede != true && datosCurso.SEDE!=''" ng-if="!isdisabled"><small>Otra Sede</small></a>
                  <a href="" class="float-right" ng-click="otraSede(false);error_sede;" ng-show="sede == true" ng-if="!isdisabled"><small>Cancelar</small></a>
                  <label class="label_show"  ng-show="sede != true && datosCurso.SEDE">{{(datosCurso.SEDE)}}</label>
                  <input type="text"  ng-show="sede == true || datosCurso.SEDE==''" id="sede_curso" name="sede_curso"  ng-change="error_sede = (formData.sede_curso?'':'Complete este campo')" ng-model="formData.sede_curso" placeholder="Tu respuesta" data-toggle="tooltip" data-placement="right" title="{{(sede == true?'Escriba otra Sede':'')}}" required    ng-init="formData.sede_curso = datosCurso.SEDE" >
@@ -247,9 +249,7 @@
                  </div>
                  <div class="form-group"  style="{{((error_fecha_curso)?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}">
                      <label for="fecha_curso"><h5>Fecha del Curso: <label class="text-danger">*</label></h5></label>
-                     <div >
-                         <input type="text"  class="text-center"  id="fecha_curso" style="width: 20%;" name="fecha_curso" ng-change="error_fecha_curso = (validar_fecha(formData.fecha_curso)?'':'Fecha Inválida')" ng-model="formData.fecha_curso" placeholder="Dia/Mes/Año" data-toggle="tooltip" data-placement="right" title="Fecha en la que le gustaría que se realice el curso. Se usará como referencia para realizar la programación" required  ng-disabled="isdisabled">
-                     </div>
+                       <input type="text" data-select="datepicker"  class="text-center"  id="fecha_curso" style="width: 20%;" name="fecha_curso" ng-change="error_fecha_curso = (validar_fecha(formData.fecha_curso)?'':'Fecha Inválida')" ng-model="formData.fecha_curso" placeholder="Dia/Mes/Año" data-toggle="tooltip" data-placement="right" title="Fecha en la que le gustaría que se realice el curso. Se usará como referencia para realizar la programación" required  ng-disabled="isdisabled" readonly>
                      <small class="text-danger">{{error_fecha_curso}}</small>
                  </div>
              </div>
@@ -271,60 +271,79 @@
      <div class="container-fluid" style="padding-top: 20px; ">
          <table class="table " ng-show="cantidad_insertados>0">
              <thead>
-                 <th colspan="6">Participantes  <div class="badge badge-secondary float-right">{{cantidad_insertados}} / {{total}}</div></th>
+                 <th colspan="6">Participantes  <a href="" style="margin-left: 20px;"  ng-click="showFormP()" ng-show="show_p == false && cantidad_insertados>0 && cantidad_insertados < total && (!isdisabled)"><small>+ Agregar Participante</small></a><div class="badge badge-secondary float-right">{{cantidad_insertados}} / {{total}}</div></th>
              </thead>
-             <thead>
-                 <th>Nombre</th>
-                 <th>Correo Electrónico</th>
-                 <th>CURP</th>
-                 <th>PERFIL</th>
-                 <th></th>
 
-             </thead>
-             <tbody  ng-repeat="(key, item) in participantes" >
-                  <td>{{ item.NOMBRE }}</td>
-                  <td>{{item.EMAIL}}</td>
-                  <td>{{item.CURP}}</td>
-                  <td>{{item.PERFIL}}</td>
-                  <td><button ng-if="!isdisabled" class="btn btn-secondary btn-sm" ng-click="showEditParticipantes(key);" ><i class="fa fa-pencil"></i>Editar</button></td>
-             </tbody>
-             <tbody><td></td></tbody>
          </table>
 
-         <a href=""  ng-click="showFormP()" ng-show="show_p == false && cantidad_insertados>0 && cantidad_insertados < total && (!isdisabled)"><small>+ Agregar Participante</small></a>
-        <div id="formParticipantes"  ng-show="(show_p == true  || cantidad_insertados==0) && (!isdisabled) " ng-if="cantidad_insertados < total" style="{{((mensaje)?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}">
-         <form novalidate>
-               <div class="form-group" style=" {{(error_nombre_participante?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}">
-                   <label for="nombre_participante"><h5>Nombre del participante:  <label class="text-danger">*</label></h5></label>
-                   <input type="text" id="nombre_participante" name="nombre_participante" ng-change="error_nombre_participante = (formDataParticipante.nombre_participante?'':'Complete este campo')" ng-model="formDataParticipante.nombre_participante" placeholder="Tu respuesta"  required >
-                   <small class="text-danger"  >{{error_nombre_participante}}</small>
-               </div>
-               <div class="form-group"  style="{{(error_email_participante?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}">
-                   <label for="email_participante"><h5>Correo Electrónico:  <label class="text-danger">*</label></h5></label>
-                   <input type="text" id="email_participante" name="email_participante" ng-change="error_email_participante = (validar_email(formDataParticipante.email_participante)?'':'Correo electrónico Inválido')"  ng-model="formDataParticipante.email_participante" placeholder="Tu respuesta"  required >
-                   <small class="text-danger" >{{error_email_participante}}</small>
-               </div>
-               <div class="form-group" style="{{(error_curp_participante?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}">
-                   <label for="curp_participante"><h5>CURP del participante:  <label class="text-danger">*</label></h5></label>
-                   <input type="text" id="curp_participante" name="curp_participante" ng-change="error_curp_participante = (curpValida(formDataParticipante.curp_participante)?'':'CURP Inválido')" ng-model="formDataParticipante.curp_participante" placeholder="Tu respuesta"  required >
-                   <small class="text-danger" >{{error_curp_participante}}</small>
-               </div>
-               <div class="form-group" style="{{(error_perfil_participante?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}">
-                   <label for="perfil_participante"><h5>Perfil del participante:  <label class="text-danger">*</label></h5></label>
-                   <textarea  id="perfil_participante" name="perfil_participante" rows="3" ng-change="error_perfil_participante = (formDataParticipante.perfil_participante?'':'Complete este campo')" ng-model="formDataParticipante.perfil_participante"  placeholder="Tu respuesta" required >
+         <div class="card" id="formParticipantes"   ng-show="(show_p == true  || cantidad_insertados==0) && (!isdisabled) "  style="margin-bottom: 20px;margin-top: 20px; {{((mensaje)?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}">
+             <h5 class="card-header">{{title_form_participante}}</h5>
+             <div class="card-body">
+                 <form novalidate>
+                     <div class="form-group" style=" {{(error_nombre_participante?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}">
+                         <label for="nombre_participante"><h5>Nombre:  <label class="text-danger">*</label></h5></label>
+                         <input type="text" id="nombre_participante" name="nombre_participante" ng-change="error_nombre_participante = (formDataParticipante.nombre_participante?'':'Complete este campo')" ng-model="formDataParticipante.nombre_participante" placeholder="Tu respuesta"  required
+                                ng-class="{ error: inscricion_form.nombre_participante.$error.required && !nombre_participante.$pristine}">
+                         <small class="text-danger"  >{{error_nombre_participante}}</small>
+                     </div>
+                     <div class="form-group"  style="{{(error_email_participante?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}">
+                         <label for="email_participante"><h5>Correo Electrónico:  <label class="text-danger">*</label></h5></label>
+                         <input type="text" id="email_participante" name="email_participante" ng-change="error_email_participante = (validar_email(formDataParticipante.email_participante)?'':'Correo electrónico Inválido')"  ng-model="formDataParticipante.email_participante" placeholder="Tu respuesta"  required >
+                         <small class="text-danger" >{{error_email_participante}}</small>
+                     </div>
+                     <div class="form-group"  style="{{(error_telefono_participante?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}">
+                         <label for="telefono_participante"><h5>Teléfono:  <label class="text-danger">*</label></h5></label>
+                         <input type="text" id="telefono_participante" name="telefono_participante" ng-change="error_telefono_participante = (validar_telefono(formDataParticipante.telefono_participante)?'':'Telefono Inválido')"  ng-model="formDataParticipante.telefono_participante" placeholder="Tu respuesta"  required >
+                         <small class="text-danger" >{{error_telefono_participante}}</small>
+                     </div>
+                     <div class="form-group" style="{{(error_curp_participante?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}">
+                         <label for="curp_participante"><h5>CURP del participante:  <label class="text-danger">*</label></h5></label>
+                         <input type="text" id="curp_participante" name="curp_participante" ng-change="onChangeCURP()" ng-model="formDataParticipante.curp_participante" placeholder="Tu respuesta"  required >
+                         <small class="text-danger" >{{error_curp_participante}}</small>
+                     </div>
+                     <div class="form-group" style="{{(error_perfil_participante?'background-color: rgba(255,9,19,0.16);border-radius: 5px;padding: 5px; ':'')}}">
+                         <label for="perfil_participante"><h5>Perfil del participante:  <label class="text-danger">*</label></h5></label>
+                         <textarea  id="perfil_participante" name="perfil_participante" rows="3" ng-change="error_perfil_participante = (formDataParticipante.perfil_participante?'':'Complete este campo')" ng-model="formDataParticipante.perfil_participante"  placeholder="Tu respuesta" required >
                    </textarea>
-                   <small class="text-danger" >{{error_perfil_participante}}</small>
+                         <small class="text-danger" >{{error_perfil_participante}}</small>
 
-               </div>
-             <div class="form-group ">
-                 <div ng-show="mensaje" class="rounded" style="color: #ff0707;margin-bottom:20px;padding:5px;border: #ccc 1px solid;border-left: rgb(255,60,21) 4px solid;">{{mensaje}}</div>
-                 <button id="guardarP" ng-show="accion == 'editar'" class="btn btn-secondary btn-sm" ng-click="submitFormParticipante('editar')" >Editar participante</button>
-                 <button  id="guardarP" ng-show="accion == 'editar'" class="btn  btn-sm btn-danger float-right" ng-click="eliminaParticipante()" >Eliminar</button>
-                 <button id="guardarP" ng-show="accion != 'editar'" class="btn btn-secondary btn-sm" ng-click="submitFormParticipante('insertar')" >+ Agregar participante</button>
+                     </div>
+                     <div class="form-group ">
+                         <div ng-show="mensaje" class="rounded" style="color: #ff0707;margin-bottom:20px;padding:5px;border: #ccc 1px solid;border-left: rgb(255,60,21) 4px solid;">{{mensaje}}</div>
+                         <button id="guardarP" ng-show="accion == 'editar'" class="btn btn-secondary btn-sm" ng-click="submitFormParticipante('editar')" >Editar participante</button>
+                         <button id="guardarP" ng-show="accion == 'editar'" class="btn btn-sm" ng-click="cancelEditParticipantes()" style="margin-left: 10px;">Cancelar</button>
+                         <button  id="guardarP" ng-show="accion == 'editar'" class="btn  btn-sm btn-danger float-right" ng-click="eliminaParticipante()" >Eliminar</button>
+                         <button id="guardarP" ng-show="accion != 'editar'" class="btn btn-secondary btn-sm" ng-click="submitFormParticipante('insertar')" >+ Agregar participante</button>
+                         <button id="guardarP" ng-show="accion != 'editar' && cantidad_insertados>0" class="btn btn-sm" ng-click="cancelEditParticipantes()" style="margin-left: 10px;">Cancelar</button>
+                     </div>
+
+                 </form>
              </div>
-
-         </form>
          </div>
+
+
+         <div class="card-columns">
+         <div class="card " ng-repeat="(key, item) in participantes">
+             <div class="card-body">
+                 <h5 class="card-title"><strong>{{ item.NOMBRE }}</strong></h5>
+                 <p class="card-text">{{ item.PERFIL }}</p>
+             </div>
+             <ul class="list-group list-group-flush">
+                 <li class="list-group-item">Correo Electrónico: <strong>{{ item.EMAIL }}</strong></li>
+                 <li class="list-group-item">Telefono: <strong>{{ item.TELEFONO }}</strong></li>
+                 <li class="list-group-item">CURP: <strong>{{ item.CURP }}</strong></li>
+             </ul>
+             <div class="card-body">
+                 <button ng-if="!isdisabled" class="btn btn-secondary btn-sm" ng-click="showEditParticipantes(key);" ><i class="fa fa-pencil"></i>Editar</button>
+             </div>
+         </div>
+         </div>
+         <br>
+         <small class="text-danger" >{{error_limite}}</small>
+
+
+
+
 
      </div>
      <div class="form-group" style="margin-top: 40px; border-top: rgba(126,72,8,0.62) 1px solid"  >
@@ -364,11 +383,19 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/moment.min.js"></script>
-<script src="js/bootstrap-material-datetimepicker.js"></script>
+<script src="js/jquery.min.js"></script>
+ <script src="js/popper.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/moment.min.js"></script>
+ <script src="js/bootstrap-material-datetimepicker.js"></script>
+<!--<script src="js/foundation-datepicker.js"></script>
+<script src="js/foundation-datepicker.es.js"></script> -->
+
+
+
+
+
+
 
 
 
