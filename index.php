@@ -27,8 +27,8 @@
 
      <title>IMNC</title>
  </head>
- <body ng-app="myApp" ng-controller="participanteController">
- <div class="container  shadow p-3 mb-5 bg-white rounded" style="width: 60%; background: white;">
+ <body ng-app="myApp" ng-controller="participanteController" ng-init="load=false">
+ <div class="container  shadow p-3 mb-5 bg-white rounded" style="width: 60%; background: white;" ng-if="load==true">
      <div id="si" ng-if="token_valido == true">
      <div class="container-fluid">
          <div class="text-center">
@@ -363,23 +363,14 @@
          <p>Por favor pongase en contacto con el instituto, para que le envíen nuevamente el link del formulario.</p>
      </div>
  </div>
- <!-- Flexbox container for aligning the toasts -->
-<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
 
-<div class="toast" id="mensaje" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-        <img src="..." class="rounded mr-2" alt="...">
-        <strong class="mr-auto">{{toast_title}}</strong>
-        <small class="text-muted"></small>
-        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="toast-body">
-        {{toast_body}}
-    </div>
-</div>
-</div>
+ <div  class=" text-center container  shadow p-3 mb-5 bg-white rounded" style="width: 60%; background: white;" ng-if="load == false">
+     <img src="image/logob.png" class="rounded w-25" style="padding-top: 20px;" alt="...">
+     <h4 style="color: #846125;">Instituto Mexicano de Normalización y Certificación, A.C</h4>
+     <div style="width:100%; height: 1px; background-color:#846125; margin-bottom: 10px;"></div>
+     <h2>Cargando la página...</h2>
+     <p>Por favor pongase en contacto con el instituto si demora demaciado.</p>
+ </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 

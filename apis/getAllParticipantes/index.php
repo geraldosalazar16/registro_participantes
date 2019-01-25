@@ -8,7 +8,6 @@
 
 include '../../jwt_imnc/common/conn-apiserver.php';
 include '../../jwt_imnc/common/conn-medoo.php';
-include '../../jwt_imnc/common/conn-sendgrid.php';
 
 function valida_parametro_and_die($parametro, $mensaje_error,$campo){
     $parametro = "" . $parametro;
