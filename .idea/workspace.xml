@@ -2,355 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2dc6dca-99be-4a2b-b7e3-d3dec3da2cd5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/conn-sendgrid.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/MIT.LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/composer.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/lib/SendGrid.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/lib/SendGrid/Email.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/lib/SendGrid/Exception.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/lib/SendGrid/Response.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/sendgrid-php.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/composer/ClassLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/composer/autoload_classmap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/composer/autoload_namespaces.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/composer/autoload_psr4.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/composer/autoload_real.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/composer/installed.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/UPGRADING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/_downloads/guzzle-schema-1.0.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/_static/guzzle-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/_static/homepage.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/_static/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/_static/prettify.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/_static/prettify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/_templates/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/_templates/leftbar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/_templates/nav_links.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/batching/batching.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/conf.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/docs.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/getting-started/faq.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/getting-started/installation.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/getting-started/overview.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/http-client/client.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/http-client/entity-bodies.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/http-client/http-redirects.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/http-client/request.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/http-client/response.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/http-client/uri-templates.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/index.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/iterators/guzzle-iterators.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/iterators/resource-iterators.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/plugins/async-plugin.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/plugins/backoff-plugin.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/plugins/cache-plugin.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/plugins/cookie-plugin.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/plugins/creating-plugins.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/plugins/curl-auth-plugin.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/plugins/history-plugin.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/plugins/log-plugin.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/plugins/md5-validator-plugin.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/plugins/mock-plugin.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/plugins/oauth-plugin.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/plugins/plugins-list.rst.inc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/plugins/plugins-overview.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/requirements.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/webservice-client/guzzle-service-descriptions.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/webservice-client/using-the-service-builder.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/docs/webservice-client/webservice-client.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/phar-stub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/phing/build.properties.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/phing/imports/dependencies.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/phing/imports/deploy.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/phing/tasks/ComposerLintTask.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/phing/tasks/GuzzlePearPharPackageTask.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/phing/tasks/GuzzleSubSplitTask.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/AbstractBatchDecorator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/Batch.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchBuilder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchClosureDivisor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchClosureTransfer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchCommandTransfer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchDivisorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchRequestTransfer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchSizeDivisor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchTransferInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/Exception/BatchTransferException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/ExceptionBufferingBatch.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/FlushingBatch.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/HistoryBatch.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Batch/NotifyingBatch.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Cache/AbstractCacheAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Cache/CacheAdapterFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Cache/CacheAdapterInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Cache/ClosureCacheAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Cache/DoctrineCacheAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Cache/NullCacheAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Cache/Zf1CacheAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Cache/Zf2CacheAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Common/AbstractHasDispatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Common/Collection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Common/Event.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/BadMethodCallException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/ExceptionCollection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/GuzzleException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/InvalidArgumentException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/RuntimeException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/UnexpectedValueException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Common/FromConfigInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Common/HasDispatcherInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Common/ToArrayInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Common/Version.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/AbstractEntityBodyDecorator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/CachingEntityBody.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Client.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/ClientInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlHandle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlMulti.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlMultiInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlMultiProxy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlVersion.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/RequestMediator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/EntityBody.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/EntityBodyInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/BadResponseException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/ClientErrorResponseException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/CouldNotRewindStreamException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/CurlException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/HttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/MultiTransferException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/RequestException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/ServerErrorResponseException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/TooManyRedirectsException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/IoEmittingEntityBody.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/AbstractMessage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/EntityEnclosingRequest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/EntityEnclosingRequestInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/CacheControl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderCollection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderFactoryInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/Link.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/MessageInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/PostFile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/PostFileInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Request.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/RequestFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/RequestFactoryInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/RequestInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Response.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Mimetypes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/QueryAggregator/CommaAggregator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/QueryAggregator/DuplicateAggregator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/QueryAggregator/PhpAggregator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/QueryAggregator/QueryAggregatorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/QueryString.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/ReadLimitEntityBody.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/RedirectPlugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Resources/cacert.pem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/StaticClient.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Http/Url.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Inflection/Inflector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Inflection/InflectorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Inflection/MemoizingInflector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Inflection/PreComputedInflector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Iterator/AppendIterator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Iterator/ChunkedIterator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Iterator/FilterIterator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Iterator/MapIterator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Iterator/MethodProxyIterator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Iterator/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Log/AbstractLogAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Log/ArrayLogAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Log/ClosureLogAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Log/LogAdapterInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Log/MessageFormatter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Log/MonologLogAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Log/PsrLogAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Log/Zf1LogAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Log/Zf2LogAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Parser/Cookie/CookieParser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Parser/Cookie/CookieParserInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Parser/Message/AbstractMessageParser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Parser/Message/MessageParser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Parser/Message/MessageParserInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Parser/Message/PeclHttpMessageParser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Parser/ParserRegistry.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Parser/UriTemplate/PeclUriTemplate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Parser/UriTemplate/UriTemplate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Parser/UriTemplate/UriTemplateInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Parser/Url/UrlParser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Parser/Url/UrlParserInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Async/AsyncPlugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/AbstractBackoffStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/AbstractErrorCodeBackoffStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/BackoffLogger.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/BackoffPlugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/BackoffStrategyInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/CallbackBackoffStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/ConstantBackoffStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/CurlBackoffStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/ExponentialBackoffStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/HttpBackoffStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/LinearBackoffStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/ReasonPhraseBackoffStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/TruncatedBackoffStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CacheKeyProviderInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CachePlugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CacheStorageInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CallbackCanCacheStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CanCacheStrategyInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DefaultCacheKeyProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DefaultCacheStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DefaultCanCacheStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DefaultRevalidation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DenyRevalidation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/RevalidationInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/SkipRevalidation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/Cookie.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/CookieJar/ArrayCookieJar.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/CookieJar/CookieJarInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/CookieJar/FileCookieJar.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/CookiePlugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/Exception/InvalidCookieException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/CurlAuth/CurlAuthPlugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/ErrorResponse/ErrorResponseExceptionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/ErrorResponse/ErrorResponsePlugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/ErrorResponse/Exception/ErrorResponseException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/History/HistoryPlugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Log/LogPlugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Md5/CommandContentMd5Plugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Md5/Md5ValidatorPlugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Mock/MockPlugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Plugin/Oauth/OauthPlugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/AbstractConfigLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Builder/ServiceBuilder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Builder/ServiceBuilderInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Builder/ServiceBuilderLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/CachingConfigLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Client.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/ClientInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/AbstractCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/ClosureCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/CommandInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/CreateResponseClassEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/DefaultRequestSerializer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/DefaultResponseParser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/AliasFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/CompositeFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/ConcreteClassFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/FactoryInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/MapFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/ServiceDescriptionFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/AbstractRequestVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/BodyVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/HeaderVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/JsonVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/PostFieldVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/PostFileVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/QueryVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/RequestVisitorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/ResponseBodyVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/XmlVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/AbstractResponseVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/BodyVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/HeaderVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/JsonVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/ReasonPhraseVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/ResponseVisitorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/StatusCodeVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/XmlVisitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/VisitorFlyweight.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/OperationCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/OperationResponseParser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/RequestSerializerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/ResponseClassInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Command/ResponseParserInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/ConfigLoaderInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Description/Operation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Description/OperationInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Description/Parameter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Description/SchemaFormatter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Description/SchemaValidator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Description/ServiceDescription.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Description/ServiceDescriptionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Description/ServiceDescriptionLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Description/ValidatorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/CommandException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/CommandTransferException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/DescriptionBuilderException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/InconsistentClientTransferException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/ResponseClassException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/ServiceBuilderException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/ServiceNotFoundException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/ValidationException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/AbstractResourceIteratorFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/CompositeResourceIteratorFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/MapResourceIteratorFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/Model.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIterator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIteratorApplyBatched.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIteratorClassFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIteratorFactoryInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIteratorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Stream/PhpStreamRequestFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Stream/Stream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Stream/StreamInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/guzzle/guzzle/src/Guzzle/Stream/StreamRequestFactoryInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/sendgrid/smtpapi/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/sendgrid/smtpapi/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/sendgrid/smtpapi/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/sendgrid/smtpapi/lib/Smtpapi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/sendgrid/smtpapi/lib/Smtpapi/Header.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/ContainerAwareEventDispatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcherInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/Debug/WrappedListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/DependencyInjection/RegisterListenersPass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/Event.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/EventDispatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/EventDispatcherInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/EventSubscriberInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/GenericEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/ImmutableEventDispatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/Tests/AbstractEventDispatcherTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/Tests/ContainerAwareEventDispatcherTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/Tests/Debug/TraceableEventDispatcherTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/Tests/DependencyInjection/RegisterListenersPassTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/Tests/EventDispatcherTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/Tests/EventTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/Tests/GenericEventTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/Tests/ImmutableEventDispatcherTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendgridlib/vendor/symfony/event-dispatcher/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jwt_imnc/common/sendmail.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/deleteParticipante/index.php" afterPath="$PROJECT_DIR$/apis/deleteParticipante/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/getAllEstados/index.php" afterPath="$PROJECT_DIR$/apis/getAllEstados/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/getAllParticipantes/index.php" afterPath="$PROJECT_DIR$/apis/getAllParticipantes/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/getDecodeToken/index.php" afterPath="$PROJECT_DIR$/apis/getDecodeToken/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/getEncodeToken/index.php" afterPath="$PROJECT_DIR$/apis/getEncodeToken/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/insert/index.php" afterPath="$PROJECT_DIR$/apis/insert/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/insertParticipante/index.php" afterPath="$PROJECT_DIR$/apis/insertParticipante/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/updateParticipante/index.php" afterPath="$PROJECT_DIR$/apis/updateParticipante/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controller/participante.js" afterPath="$PROJECT_DIR$/js/controller/participante.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jwt_imnc/common/conn-medoo.php" afterPath="$PROJECT_DIR$/jwt_imnc/common/conn-medoo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/apiserver.php" afterPath="$PROJECT_DIR$/common/apiserver.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -371,11 +27,29 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="371" column="74" lean-forward="false" selection-start-line="371" selection-start-column="74" selection-end-line="371" selection-end-column="74" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="2162">
+              <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apiserver.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/apiserver.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="78" lean-forward="false" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apis/getDecodeToken/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -383,38 +57,20 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apis/getEncodeToken/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="816">
+              <caret line="53" column="2" lean-forward="false" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
+              <folding>
+                <element signature="e#6#89#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apis/deleteParticipante/index.php">
+      <file leaf-file-name="conn-apiserver.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jwt_imnc/common/conn-apiserver.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apis/insertParticipante/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="participante.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controller/participante.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="81" column="26" lean-forward="false" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
+            <state relative-caret-position="17">
+              <caret line="1" column="63" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -423,7 +79,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apis/insert/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
+            <state relative-caret-position="136">
               <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
               <folding />
             </state>
@@ -435,7 +91,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-              <folding />
+              <folding>
+                <element signature="e#6#89#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -445,27 +103,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="conn-medoo.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jwt_imnc/common/conn-medoo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apis/getAllParticipantes/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-              <folding />
+              <folding>
+                <element signature="e#6#89#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -538,20 +178,20 @@
         <option value="$PROJECT_DIR$/css/doc.css" />
         <option value="$PROJECT_DIR$/css/bootstrap-material-datetimepicker.css" />
         <option value="$PROJECT_DIR$/js/bootstrap-material-datetimepicker.js" />
-        <option value="$PROJECT_DIR$/common/apiserver.php" />
-        <option value="$PROJECT_DIR$/jwt_imnc/common/conn-apiserver.php" />
         <option value="$PROJECT_DIR$/Index.php" />
-        <option value="$PROJECT_DIR$/apis/getDecodeToken/index.php" />
         <option value="$PROJECT_DIR$/apis/deleteParticipante/index.php" />
         <option value="$PROJECT_DIR$/apis/getAllEstados/index.php" />
         <option value="$PROJECT_DIR$/apis/getAllParticipantes/index.php" />
-        <option value="$PROJECT_DIR$/apis/getEncodeToken/index.php" />
         <option value="$PROJECT_DIR$/apis/insert/index.php" />
         <option value="$PROJECT_DIR$/apis/insertParticipante/index.php" />
         <option value="$PROJECT_DIR$/apis/updateParticipante/index.php" />
         <option value="$PROJECT_DIR$/js/controller/participante.js" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/jwt_imnc/common/conn-medoo.php" />
+        <option value="$PROJECT_DIR$/apis/getEncodeToken/index.php" />
+        <option value="$PROJECT_DIR$/common/apiserver.php" />
+        <option value="$PROJECT_DIR$/jwt_imnc/common/conn-apiserver.php" />
+        <option value="$PROJECT_DIR$/apis/getDecodeToken/index.php" />
       </list>
     </option>
   </component>
@@ -569,7 +209,7 @@
     <option name="height" value="744" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -582,138 +222,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jwt_imnc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jwt_imnc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apis" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apis" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="insert" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registro_participantes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apis" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="getDecodeToken" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
@@ -816,12 +325,18 @@
       <workItem from="1548263645455" duration="12001000" />
       <workItem from="1548277177806" duration="2268000" />
       <workItem from="1548279654007" duration="5470000" />
-      <workItem from="1548355869851" duration="4889000" />
+      <workItem from="1548355869851" duration="5492000" />
+      <workItem from="1548537412119" duration="1195000" />
+      <workItem from="1548546119244" duration="1824000" />
+      <workItem from="1548630530734" duration="400000" />
+      <workItem from="1548631119378" duration="2191000" />
+      <workItem from="1548671106640" duration="608000" />
+      <workItem from="1548694676131" duration="1857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223010000" />
+    <option name="totallyTimeSpent" value="231688000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -834,16 +349,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2667173" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27583587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5030303" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3344426" sideWeight="0.4969697" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3371901" sideWeight="0.4969697" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -851,9 +365,29 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5030303" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33610648" sideWeight="0.4969697" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27583587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -897,9 +431,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -915,7 +447,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="42" selection-end-column="2" />
-          <folding />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -952,9 +486,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -970,7 +502,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="42" selection-end-column="2" />
-          <folding />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1007,9 +541,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
           <caret line="89" column="45" lean-forward="false" selection-start-line="89" selection-start-column="45" selection-end-line="89" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1025,7 +557,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1109,9 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
           <caret line="5" column="19229" lean-forward="false" selection-start-line="5" selection-start-column="19229" selection-end-line="5" selection-end-column="19229" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1119,7 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1127,7 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
           <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1135,42 +664,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="260" lean-forward="false" selection-start-line="20" selection-start-column="260" selection-end-line="20" selection-end-column="260" />
-          <folding>
-            <marker date="1548272729764" expanded="true" signature="9088:9098" ph="..." />
-            <marker date="1548272729764" expanded="true" signature="9297:9307" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jwt_imnc/common/conn-sendgrid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt_imnc/common/conn-sendgrid.php" />
     <entry file="file://$PROJECT_DIR$/common/apiserver.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="61" lean-forward="true" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/apiserver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="64" lean-forward="true" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apis/getDecodeToken/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1178,15 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apis/getAllEstados/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1194,15 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apis/getEncodeToken/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1210,15 +693,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt_imnc/common/conn-apiserver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1226,31 +703,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apis/insert/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
+        <state relative-caret-position="136">
           <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="371" column="74" lean-forward="false" selection-start-line="371" selection-start-column="74" selection-end-line="371" selection-end-column="74" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/controller/participante.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="1377">
           <caret line="81" column="26" lean-forward="false" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
           <folding />
         </state>
@@ -1260,6 +726,57 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/getAllEstados/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/apiserver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="78" lean-forward="false" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/getEncodeToken/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="53" column="2" lean-forward="false" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt_imnc/common/conn-apiserver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="63" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2162">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/getDecodeToken/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
           <folding />
         </state>
       </provider>
