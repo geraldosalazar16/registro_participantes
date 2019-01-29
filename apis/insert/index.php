@@ -7,7 +7,6 @@
  */
 include '../../jwt_imnc/common/conn-apiserver.php';
 include '../../jwt_imnc/common/conn-medoo.php';
-include '../../jwt_imnc/common/conn-sendgrid.php';
 
 function insert($database,$pTABLA,$pIDTEXT,$pID,$pDETALLE,$pVALOR)
 {

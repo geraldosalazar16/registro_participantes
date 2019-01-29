@@ -1,15 +1,16 @@
 <?php
  
 //include $_SERVER["DOCUMENT_ROOT"] . "/siec2/api.imnc/imnc/common/medoolib/medoo.php";
-include $_SERVER["DOCUMENT_ROOT"] . "/registro_participantes/jwt_imnc/common/medoolib/medoo.php";
+include "medoolib/medoo.php";
+//include "medoolib/medoo.php";
 
 $database = new medoo([
 	// required
 	'database_type' => 'mysql',
-	'database_name' => 'sistemai_imnc_prueba',
+	'database_name' => 'sistemai_imnc_siec2_prueba',
 	'server' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	'username' => 'sistemai_root',
+	'password' => 'Password1028',
 	'charset' => 'utf8',
  
 	// [optional]

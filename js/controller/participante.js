@@ -45,6 +45,7 @@ $scope.verificaToken = function () {
     var token = {
         TOKEN:  $scope.token
     };
+  
     $.post(global_apiserver + "/getDecodeToken/", JSON.stringify(token), function (respuesta) {
         respuesta = JSON.parse(respuesta);
         if (respuesta.validez == "valido") {

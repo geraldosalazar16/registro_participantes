@@ -1,0 +1,3 @@
+[24-Jan-2019 18:39:06 UTC] PHP Warning:  include(/home/sistemai/public_html/imnc/jwt_imnc/common/sendgridlib/sendgrid-php.php): failed to open stream: No such file or directory in /home/sistemai/public_html/imnc/registro_participantes/jwt_imnc/common/conn-sendgrid.php on line 3
+[24-Jan-2019 18:39:06 UTC] PHP Warning:  include(): Failed opening '/home/sistemai/public_html/imnc/jwt_imnc/common/sendgridlib/sendgrid-php.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/sistemai/public_html/imnc/registro_participantes/jwt_imnc/common/conn-sendgrid.php on line 3
+[24-Jan-2019 18:39:06 UTC] PHP Fatal error:  Class 'SendGrid' not found in /home/sistemai/public_html/imnc/registro_participantes/jwt_imnc/common/conn-sendgrid.php on line 8

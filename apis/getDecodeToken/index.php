@@ -1,7 +1,6 @@
 <?php
 include '../../jwt_imnc/common/conn-apiserver.php';
 include '../../jwt_imnc/common/conn-medoo.php';
-include '../../jwt_imnc/common/conn-sendgrid.php';
 require_once '../../jwt_imnc/vendor/autoload.php';
 use \Firebase\JWT\JWT;
 
