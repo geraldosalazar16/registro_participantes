@@ -38,10 +38,10 @@ $duration = 60*60*24*30;
 
 //payload
 $data = [
-    'ID_CLIENTE' => 436,
+    'ID_CLIENTE' => 551,
     'MODALIDAD' => "insitu",
-    'ID_CURSO' => 1,
-    'ID_PROGRAMACION' => 18
+    'ID_CURSO' => 2,
+    'ID_PROGRAMACION' => 30
 ];
 /*
 iss = issuer, servidor que genera el token

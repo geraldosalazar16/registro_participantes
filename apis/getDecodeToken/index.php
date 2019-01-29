@@ -1,7 +1,7 @@
 <?php
-include '../../jwt_imnc/common/conn-apiserver.php';
-include '../../jwt_imnc/common/conn-medoo.php';
-require_once '../../jwt_imnc/vendor/autoload.php';
+    include '../../jwt_imnc/common/conn-apiserver.php';
+    include '../../jwt_imnc/common/conn-medoo.php';
+    require_once '../../jwt_imnc/vendor/autoload.php';
 use \Firebase\JWT\JWT;
 
 function valida_parametro_and_die($parametro, $mensaje_error){
@@ -39,6 +39,7 @@ valida_parametro_and_die($jwt , "Es necesario introducir un token");
 
 try{
     $decoded = JWT::decode($jwt, $key, $encrypt);
+
     //Validar iis = $global_apiserver
 //Validar que el issuer obtenido del token sea igual al que se usó
 //print_r(json_encode($decoded->iss."--".$global_apiserver));
@@ -90,7 +91,13 @@ try{
             valida_error_medoo_and_die();
             if(count($curso)==0)
                 $respuesta["validez"] = 'invalido';
-            $fecha_inicio = date("Ymd", strtotime($curso["FECHA_INICIO"]));
+
+            $fecha_inicio = "";
+            if($curso["FECHA_INICIO"]!=null && $curso["FECHA_INICIO"]!="")
+            {
+                $fecha_inicio = date("Ymd", strtotime($curso["FECHA_INICIO"]));
+            }
+
             $sede = $database->get("SCE_CURSOS" ,["[><]CLIENTES_DOMICILIOS"=>["ID_SITIO"=>"ID"]],["NOMBRE_DOMICILIO","CALLE","NUMERO_EXTERIOR","NUMERO_INTERIOR","COLONIA_BARRIO","DELEGACION_MUNICIPIO"],["AND"=>["ID_SCE"=>$decoded->data->ID_PROGRAMACION,"ID_CURSO"=>$decoded->data->ID_CURSO]]);
             valida_error_medoo_and_die();
             $curso["SEDE"] =$sede["NOMBRE_DOMICILIO"].($sede["CALLE"]?", Calle: ".$sede["CALLE"]:"").($sede["NUMERO_EXTERIOR"]?", # Ext.: ".$sede["NUMERO_EXTERIOR"]:"").($sede["NUMERO_INTERIOR"]?", # Int.: ".$sede["NUMERO_INTERIOR"]:"").($sede["COLONIA_BARRIO"]?", Barrio: ".$sede["COLONIA_BARRIO"]:"").($sede["DELEGACION_MUNICIPIO"]?", Municipio: ".$sede["DELEGACION_MUNICIPIO"]:"");
@@ -120,7 +127,18 @@ try{
 
         $hoy = date("Ymd");
         $flag = false;
-        if($hoy>$fecha_inicio){$flag = true;}
+        if ($decoded->data->MODALIDAD == "programado") {
+            if ($hoy > $fecha_inicio) {
+                $flag = true;
+            }
+        }
+        if ($decoded->data->MODALIDAD == "insitu") {
+            if($fecha_inicio!="" && $hoy > $fecha_inicio)
+            {
+                $flag = true;
+
+            }
+        }
         if($etapa!="INSCRITO" && $etapa!="PROGRAMADO"){$flag = true;}
 
         $respuesta["DISABLED"] = $flag;

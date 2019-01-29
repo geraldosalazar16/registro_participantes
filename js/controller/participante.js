@@ -8,6 +8,7 @@
  * @requires $scope
  * */
 angular.module('myApp', []).controller('participanteController', function($scope) {
+  $scope.load = false;
   $scope.formData = {};
   $scope.formDataParticipante = {};
   $scope.datosCliente = {};
@@ -45,9 +46,10 @@ $scope.verificaToken = function () {
     var token = {
         TOKEN:  $scope.token
     };
-  
+    var flag = false;
     $.post(global_apiserver + "/getDecodeToken/", JSON.stringify(token), function (respuesta) {
         respuesta = JSON.parse(respuesta);
+
         if (respuesta.validez == "valido") {
           $scope.token_valido = true;
             $scope.datosCliente = respuesta.CLIENTE;
@@ -64,6 +66,7 @@ $scope.verificaToken = function () {
             $scope.total = respuesta.CANTIDAD_PARTICIPANTES;
             $scope.cargarDetalles();
             $scope.cargaParticipantes();
+            flag = true;
             $scope.$apply();
 
         }
@@ -71,9 +74,12 @@ $scope.verificaToken = function () {
         {
 
                 $scope.token_valido = false;
+                flag = true;
 
 
         }
+
+        $scope.load = flag;
         $scope.$apply();
     });
 

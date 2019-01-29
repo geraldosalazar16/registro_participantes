@@ -1,8 +1,8 @@
 <?php
  
 //include $_SERVER["DOCUMENT_ROOT"] . "/siec2/api.imnc/imnc/common/medoolib/medoo.php";
+//include $_SERVER["DOCUMENT_ROOT"] . "/registro_participantes/jwt_imnc/common/medoolib/medoo.php";
 include "medoolib/medoo.php";
-//include "medoolib/medoo.php";
 
 $database = new medoo([
 	// required
